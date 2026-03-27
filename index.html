@@ -1,0 +1,78 @@
+// ===== index.html =====
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kenji Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <h1 class="logo">Kenji.dev</h1>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section id="home" class="section hero">
+  <div class="container">
+    <h2 class="hero-title">Hi, I'm Nguyen Vo Anh Quoc</h2>
+    <p class="hero-sub">Backend Developer • Spring Boot • System Design</p>
+    <button class="btn" onclick="scrollToSection('projects')">View Projects</button>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>
+      I build scalable backend systems using Spring Boot. Passionate about APIs, databases, and clean architecture.
+    </p>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="container">
+    <h2>Projects</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Food Ordering System</h3>
+        <p>Microservices system with order, menu, inventory.</p>
+        <a href="https://github.com/aquoc09/weborder-backend.git">GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>HR Management System</h3>
+        <p>Auth, attendance, payroll system.</p>
+        <a href="https://github.com/aquoc09/qlnv-backend-spring.git">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Email: anhquoc6a4@gmail.com</p>
+    <button class="btn" onclick="sayHello()">Say Hello</button>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Kenji. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
