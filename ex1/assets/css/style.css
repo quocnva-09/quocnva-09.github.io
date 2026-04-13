@@ -1,16 +1,17 @@
-/* tag css */
+/* start element css */
 body{
     background-color: #121214;
     color: #fff;
     font-family: 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 main{
     display: flex;
-    width: 1000px;
+    width: 700px;
+    height: 585px;
 }
 
 p, li{
@@ -21,23 +22,29 @@ hr{
     border: none;
     border-top: 1px dotted;
 }
-
-.main-content{
-    width: 65%;
-    height: fit-content;
-    margin-right: 30px;
-    margin-top: 50px;
-}
+/* end element css */
 
 
-/* class css */
-
+/* start general class css */
 .ml-20{
     margin-left: 20px;
 }
 
-/* sec-content */
+.mg-pd-0{
+    margin-top: 0px;
+    padding: 0px;
+}
+/* end general class css */
 
+
+/* start main-content */
+.main-content{
+    width: 70%;
+    margin-right: 30px;
+    margin-top: 50px;
+}
+
+/* start sec-content */
 .sec-content{
     width: 100%;
 }
@@ -57,13 +64,12 @@ hr{
 }
 
 .pic-info img{
-    width: 120%;
+    width: 100%;
     height: auto;
 }
+/* end sec-content */
 
-
-/* sec-list */
-
+/* start sec-list */
 .sec-list{
     margin-top: 100px;
 }
@@ -86,8 +92,8 @@ hr{
     list-style: none;
 }
 
-.sec-list ul li{
-    text-decoration: underline;
+.sec-list ul li a{
+    color:#595959;
 }
 
 .sec-list ul li::before{
@@ -97,9 +103,11 @@ hr{
     text-decoration: none;
     display: inline-block;
 }
+/* end sec-list */
+/* end main-content */
 
-/* btn-more */
 
+/* start btn-more */
 .btn-more{
     text-decoration: none;
     color: white;
@@ -110,8 +118,9 @@ hr{
     content: url(../images/icn_arr.png);
     margin-right: 5px;
 }
+/* end btn-more */
 
-/* aside card */
+/* start aside card */
 .hr-line{
     border: none;
     border-top: 1px solid;
@@ -120,7 +129,7 @@ hr{
 
 .card{
     background-color: #232227;
-    width: 35%;
+    width: 30%;
     height: 70%;
     display: flex; 
     flex-direction: column;
@@ -167,3 +176,4 @@ hr{
 .card-pic img{
     width: 100%;
 }
+/* end aside card */
