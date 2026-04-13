@@ -3,11 +3,11 @@ const exercises = [
     category: "HTML/CSS",
     name: "Tuần 1: Ngày 1 - Bài tập 1",
     links: {
-      "Bài làm": "ex1/index.html",
+      "Bài làm": "ex1/",
       "Mã nguồn":
-        "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/ex1/index.html",
+        "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/ex1",
       "Hình tham chiếu":
-        "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/ex1/de_1.png",
+        "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/ex1/de_1.jpg?raw=true",
     },
   }
 ];
