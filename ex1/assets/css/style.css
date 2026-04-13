@@ -1,0 +1,178 @@
+/* tag css */
+body{
+    background-color: #121214;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+}
+
+main{
+    display: flex;
+    width: 1000px;
+    align-items: center;
+}
+
+p, li{
+    color: #595959;
+    white-space: normal;
+}
+
+hr{
+    border: 1px dotted;
+}
+
+content{
+    width: 60%;
+    height: fit-content;
+    margin-right: 30px;
+    margin-top: 5%;
+}
+
+
+/* class css */
+
+.ml-20{
+    margin-left: 20px;
+}
+
+.hr-line{
+    border: 1px solid;
+    width: 100%;
+}
+
+
+/* sec-content */
+
+.sec-content{
+    width: 100%;
+}
+
+.sec-info{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.info-content{
+    flex: 2;
+}
+
+.pic-info{
+    flex: 1;
+}
+
+.pic-info img{
+    width: 120%;
+    height: auto;
+    display: block;
+}
+
+
+/* sec-list */
+
+.sec-list{
+    margin-top: 100px;
+}
+
+.sec-list h4,
+.sec-list p
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+.sec-list ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-left: 0px;
+    height: 125px;
+    gap: 15px;
+    list-style: none;
+}
+
+.sec-list ul li{
+    text-decoration: underline;
+}
+
+.sec-list ul li::before{
+    content: "►";
+    margin-right: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* btn-more */
+
+.btn-more{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-more::before{
+    display: inline-block;
+    content: url(../images/icn_arr.png);
+    margin-right: 5px;
+}
+
+/* aside card */
+.card{
+    background-color: #232227;
+    width: 30%;
+    height: 70%;
+    display: flex; 
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    align-self: flex-start;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.card .btn-more{
+    align-self: flex-start;
+    margin-top: 100px;
+}
+
+.card-text{
+    color: white;
+    font-weight: bold;
+    align-self: flex-start;
+    margin: 0px;
+    padding: 0px;
+}
+
+.card-text-sub{
+    color: #767884;
+    margin: 0px;
+    padding: 0px;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 40px 20px 40px;
+}
+
+.card-info h4,
+.card-info p
+{
+    align-self: flex-start;
+    margin: 0px;
+    padding: 0px;
+}
+
+.card-pic{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-pic img{
+    width: 100%;
+}
