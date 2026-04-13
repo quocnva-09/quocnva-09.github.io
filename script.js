@@ -5,9 +5,9 @@ const exercises = [
     links: {
       "Bài làm": "ex1/index.html",
       "Mã nguồn":
-        "",
+        "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/ex1/index.html",
       "Hình tham chiếu":
-        "",
+        "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/ex1/de_1.png",
     },
   }
 ];
