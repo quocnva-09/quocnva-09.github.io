@@ -11,7 +11,7 @@ body{
 main{
   background-color: #fff;
   width: 363px;
-  height: 774px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +39,7 @@ main{
   width: 316px;
   min-height: 733px;
   background-color: #e6f3fb;
+  margin: 20px 0;
 }
 
 .hr-line{
@@ -103,6 +104,11 @@ main{
   text-decoration: none;
   font-weight: bold;
 }
+
+.blog-detail__info a:hover{
+  text-decoration: underline;
+}
+
 .blog-detail__info p{
   margin: 0;
 }
@@ -133,6 +139,10 @@ main{
   padding: 10px;
   text-decoration: none;
   display: block;
+}
+
+.blog-detail__links a:hover{
+  text-decoration: underline;
 }
 
 .blog-detail__links span{
@@ -217,6 +227,10 @@ main{
   pointer-events: auto;
   display: block;
 }
+
+.blog-detail__footer-text a:hover{
+  text-decoration: underline;
+}
 /*End of wrapping css horoscopes */
 
 /* Wrapping for blog-detail--news */
@@ -250,6 +264,10 @@ main{
   text-decoration: none;
   align-self: flex-start;
   margin-left: 20px;
+}
+
+.blog-detail__content--news a:hover{
+  text-decoration: underline;
 }
 
 .blog-detail__img{
