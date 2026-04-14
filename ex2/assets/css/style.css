@@ -1,0 +1,278 @@
+/* Wrapping for element css */
+body{
+  background-color: #181818;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+  background-color: #fff;
+  width: 363px;
+  height: 774px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* End wraping for element css */
+
+/* General css for all element in main-content */
+.mt-0{
+  margin-top: 0;
+}
+/* End general css for all element in main-content */
+
+/* Wraping for main-content css */
+.main-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 316px;
+  height: 733px;
+  background-color: #e6f3fb;
+}
+
+/* Wraping for blog-content css */
+.blog-content{
+  width: 296px;
+  height: 225px;
+}
+
+.blog-content h4{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 0;
+}
+
+.blog-detail{
+  width: 296px;
+  height: 207px;
+  background-color: #fff;
+  border: none;
+  border-top: 4px solid #f7a418;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapping for blog-detail__content */
+.blog-detail__content{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+}
+
+.blog-detail__pic{
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.blog-detail__pic img{
+  width: 156px;
+  height: 81px;
+  margin: 0 10px;
+}
+
+.blog-detail__info{
+  margin: 10px 0;
+}
+
+.blog-detail__info h4{
+  color: #0a6395;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.blog-detail__info p{
+  margin: 0;
+}
+/* end wrapping for blog-detail__content-text */
+
+/* Wrapping for blog-detail__content-text */
+.blog-detail__text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #f9f1c2;
+  height: 107px;
+  width: 100%;
+}
+
+.blog-detail__text hr{
+  border: none;
+  border-top: 1px solid #fff;
+  width: 100%;
+  margin: 0;
+}
+
+.blog-detail__text p{
+  color: #0a6395;
+  margin: 0 10px;
+}
+
+.blog-detail__text span{
+  font-weight: bold;
+}
+/* end wrapping for blog-detail-text */
+
+/* Wrapping css horoscopes */
+.blog-detail__content--horoscopes{
+  height: 140px;
+}
+
+.blog-detail__pic--horoscopes{
+  display: flex;
+  align-items: center;
+  height: 140px;
+}
+
+.blog-detail__pic--horoscopes img{
+  width: 76px;
+  height: 85px;
+}
+
+.blog-detail__info--horoscopes{
+  height: 140px;
+}
+
+.blog-detail__info--horoscopes h4{
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:#000;
+  margin: 0;
+}
+
+.blog-detail__info--horoscopes h5{
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: #595959;
+  margin: 0;
+}
+
+.blog-detail__info--horoscopes p{
+  margin: 10px 0 0;
+}
+
+.blog-detail__footer-img{
+  padding: 0;
+  width: 297px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-top: auto;
+}
+
+.blog-detail__footer-img img{
+  padding: 0;
+  width: 297px;
+  height: 47px;
+}
+
+.blog-detail__footer-text {
+  position: absolute;
+  left: 45%;
+  width: 142px;
+  font-size: 11px;
+}
+
+.blog-detail__footer-text span{
+  font-weight: bold;
+  color: #0a6395;
+}
+/*End of wrapping css horoscopes */
+
+/* Wrapping for blog-detail--news */
+.blog-content--news{
+  margin-top:20px;
+  height: 113px;
+}
+
+.blog-detail--news{
+  display: flex;
+  flex-direction: row;
+  height: 113px;
+}
+
+.blog-detail__content--news{
+  width: 119px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width:60%;
+}
+
+.blog-detail__content--news p{
+  margin-top:20px;
+  width: 125px;
+  height: 54px;
+}
+
+.blog-detail__content--news a{
+  color: #0a6395;
+  text-decoration: none;
+  align-self: flex-start;
+  margin-left: 25px;
+}
+
+.blog-detail__img{
+  width: 116px;
+  height: 113px;
+  align-self: center;
+  margin: 0;
+}
+/* End of wrapping css blog-detail--news */
+
+/* Start blog-content-competions */
+.blog-content--competions{
+  height: 91px;
+}
+
+.blog-detail--competions{
+  height: 78px;
+  border:#000 1px solid;
+  display: flex;
+  justify-content: space-around;
+}
+
+.blog-detail__text--competions p{
+  margin: 0 10px;
+  color: #4d5d73;
+  background-color: #fff;
+}
+
+/*End of wrapping css blog-content-competions */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
