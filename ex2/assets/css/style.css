@@ -22,6 +22,13 @@ main{
 .mt-0{
   margin-top: 0;
 }
+.mt-5{
+  margin-top: 5px;
+}
+
+.mt-10{
+  margin-top: 10px;
+}
 /* End general css for all element in main-content */
 
 /* Wraping for main-content css */
@@ -30,14 +37,22 @@ main{
   flex-direction: column;
   align-items: center;
   width: 316px;
-  height: 733px;
+  min-height: 733px;
   background-color: #e6f3fb;
+}
+
+.hr-line{
+  width: auto;
+  border: none;
+  border-top: 1px solid #000;
+  margin: 10px 10px;
+  align-self: stretch;
 }
 
 /* Wraping for blog-content css */
 .blog-content{
   width: 296px;
-  height: 225px;
+  height: auto;
 }
 
 .blog-content h4{
@@ -49,7 +64,7 @@ main{
 
 .blog-detail{
   width: 296px;
-  height: 207px;
+  height: auto;
   background-color: #fff;
   border: none;
   border-top: 4px solid #f7a418;
@@ -62,7 +77,7 @@ main{
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100px;
+  height: auto;
 }
 
 .blog-detail__pic{
@@ -73,69 +88,78 @@ main{
 
 .blog-detail__pic img{
   width: 156px;
-  height: 81px;
+  height: auto;
   margin: 0 10px;
 }
 
 .blog-detail__info{
-  margin: 10px 0;
+  margin: 10px 5px;
 }
 
-.blog-detail__info h4{
+.blog-detail__info a{
   color: #0a6395;
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: bold;
 }
 .blog-detail__info p{
   margin: 0;
 }
+
+.blog-detail__info span{
+  font-style: italic;
+}
+
 /* end wrapping for blog-detail__content-text */
 
 /* Wrapping for blog-detail__content-text */
 .blog-detail__text{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  background-color: #f9f1c2;
-  height: 107px;
+  height: auto;
   width: 100%;
 }
 
-.blog-detail__text hr{
-  border: none;
-  border-top: 1px solid #fff;
+.blog-detail__links{
+  height: auto;
   width: 100%;
-  margin: 0;
+  margin-top: 5px;
 }
 
-.blog-detail__text p{
+.blog-detail__links a{
   color: #0a6395;
-  margin: 0 10px;
+  margin: 0;
+  background-color: #f9f1c2;
+  border: 1px solid #fff;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
 }
 
-.blog-detail__text span{
+.blog-detail__links span{
   font-weight: bold;
 }
-/* end wrapping for blog-detail-text */
+/* end wrapping for blog-detail-links */
 
 /* Wrapping css horoscopes */
 .blog-detail__content--horoscopes{
-  height: 140px;
+  height: auto;
 }
 
 .blog-detail__pic--horoscopes{
   display: flex;
-  align-items: center;
-  height: 140px;
+  align-items: flex-start;
+  height: auto;
+  margin-top: 20px;
 }
 
 .blog-detail__pic--horoscopes img{
   width: 76px;
-  height: 85px;
+  height: auto;
 }
 
 .blog-detail__info--horoscopes{
-  height: 140px;
+  height: auto;
+  margin: 20px 10px 0;
 }
 
 .blog-detail__info--horoscopes h4{
@@ -154,74 +178,83 @@ main{
 }
 
 .blog-detail__info--horoscopes p{
-  margin: 10px 0 0;
+  margin: 15px 0;
+}
+
+.blog-detail__info--horoscopes a{
+  color: #0a6395;
+  text-decoration: underline;
 }
 
 .blog-detail__footer-img{
   padding: 0;
   width: 297px;
-  height: 47px;
+  height: auto;
   display: flex;
   justify-content: center;
   margin: 0;
   margin-top: auto;
+  position: relative;
 }
 
 .blog-detail__footer-img img{
+  display: block;
   padding: 0;
   width: 297px;
-  height: 47px;
+  height: auto;
 }
 
 .blog-detail__footer-text {
   position: absolute;
-  left: 45%;
-  width: 142px;
+  left: 20px;
   font-size: 11px;
 }
 
-.blog-detail__footer-text span{
+.blog-detail__footer-text a{
   font-weight: bold;
+  text-decoration: none;
   color: #0a6395;
+  pointer-events: auto;
+  display: block;
 }
 /*End of wrapping css horoscopes */
 
 /* Wrapping for blog-detail--news */
 .blog-content--news{
   margin-top:20px;
-  height: 113px;
+  height: auto;
 }
 
 .blog-detail--news{
   display: flex;
   flex-direction: row;
-  height: 113px;
+  height: auto;
 }
 
 .blog-detail__content--news{
-  width: 119px;
   display:flex;
   flex-direction: column;
-  align-items: center;
-  width:60%;
+  align-items: flex-start;
+  width: 60%;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .blog-detail__content--news p{
-  margin-top:20px;
+  margin: 20px 20px 10px;
   width: 125px;
-  height: 54px;
+  height: auto;
 }
 
 .blog-detail__content--news a{
   color: #0a6395;
   text-decoration: none;
   align-self: flex-start;
-  margin-left: 25px;
+  margin-left: 20px;
 }
 
 .blog-detail__img{
   width: 116px;
-  height: 113px;
+  height: auto;
   align-self: center;
   margin: 0;
 }
@@ -229,14 +262,17 @@ main{
 
 /* Start blog-content-competions */
 .blog-content--competions{
-  height: 91px;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .blog-detail--competions{
-  height: 78px;
-  border:#000 1px solid;
+  height: auto;
+  border:#595959 1px solid;
   display: flex;
   justify-content: space-around;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 10px 0;
 }
 
 .blog-detail__text--competions p{
