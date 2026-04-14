@@ -40,8 +40,8 @@ hr{
 
 /* start main-content */
 .main-content{
-    width: 66%;
-    margin-right: 30px;
+    width: 464px;
+    padding-right: 25px;
     margin-top: 50px;
 }
 
@@ -129,7 +129,7 @@ hr{
 /* start aside card */
 .card{
     background-color: #232227;
-    width: 34%;
+    width: 236px;
     height: 386px;
     display: flex; 
     flex-direction: column;
