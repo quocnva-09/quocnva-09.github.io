@@ -32,6 +32,7 @@ hr{
 
 .mg-pd-0{
     margin-top: 0px;
+    margin-bottom: 0px;
     padding: 0px;
 }
 /* end general class css */
@@ -39,7 +40,7 @@ hr{
 
 /* start main-content */
 .main-content{
-    width: 70%;
+    width: 66%;
     margin-right: 30px;
     margin-top: 50px;
 }
@@ -59,13 +60,17 @@ hr{
     flex: 2;
 }
 
+.info-content-text{
+    margin-bottom: 0px;
+}
+
 .pic-info{
     flex: 1;
 }
 
 .pic-info img{
-    width: 100%;
-    height: auto;
+    width: 129px;
+    height: 92px;
 }
 /* end sec-content */
 
@@ -86,6 +91,7 @@ hr{
     flex-wrap: wrap;
     flex-direction: column;
     margin-top: 20px;
+    margin-bottom: 0px;
     padding-left: 0px;
     height: 125px;
     gap: 15px;
@@ -121,16 +127,10 @@ hr{
 /* end btn-more */
 
 /* start aside card */
-.hr-line{
-    border: none;
-    border-top: 1px solid;
-    width: 100%;
-}
-
 .card{
     background-color: #232227;
-    width: 30%;
-    height: 70%;
+    width: 34%;
+    height: 386px;
     display: flex; 
     flex-direction: column;
     gap: 0px;
@@ -140,9 +140,46 @@ hr{
     margin-top: 50px;
 }
 
+.card-info{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    width: 100%;
+}
+
+.hr-line{
+    border: none;
+    border-top: 1px solid;
+    width: 80%;
+    align-self: center;
+}
+
+.card-info h4,
+.card-info p
+{
+    align-self: flex-start;
+    margin: 0px 20px;
+}
+
+.card-pic{
+    width: 100%;
+    margin-bottom: 25px;
+    margin: 0px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-pic img{
+    width: 174px;
+    height: 96px;
+}
+
 .card .btn-more{
     align-self: flex-start;
-    margin-top: 100px;
+    margin-top: 47px;
+    margin-left: 20px;
 }
 
 .card-text-sub{
@@ -152,28 +189,5 @@ hr{
 
 .card-text{
     color: #767884;
-}
-
-.card-info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 40px 20px 40px;
-}
-
-.card-info h4,
-.card-info p
-{
-    align-self: flex-start;
-    margin: 0px;
-    padding: 0px;
-}
-
-.card-pic{
-    width: 100%;
-}
-
-.card-pic img{
-    width: 100%;
 }
 /* end aside card */
