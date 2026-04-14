@@ -1,0 +1,187 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+main {
+  width: 500px;
+  border: 2px solid #ececec;
+  display: flex;
+  flex-direction: column;
+}
+h3 {
+  margin: 0;
+  padding: 0 5px;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+/* Start player profile css */
+.player-profile {
+  position: relative;
+}
+
+.player-profile h3{
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.hr-line {
+  position: absolute;
+  border: none; 
+  z-index: 1;
+  top: 10px;
+  height: 15px; 
+  background: linear-gradient(to bottom, #d0d0d0 0%, #f2f2f2 50%, transparent 100%);
+  margin: 0;
+  width: 100%;
+}
+
+.player-profile__box-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 5px;
+}
+
+.player-profile__avt {
+  flex: 0 0 auto;
+  margin: 0 0 0 10px;
+}
+
+.player-profile__avt img {
+  display: block;
+  max-width: 83px;
+  height: auto;
+}
+
+.player-profile__info {
+  width: 100%;
+  overflow: scroll;
+  margin: 0 10px;
+  padding: 0;
+  list-style: none;
+  height: 100px;
+}
+
+.player-profile__info li {
+  padding: 0 10px;
+}
+
+/* End player profile css */
+
+/* Start achievements css */
+.achievements {
+  margin: 20px 0;
+}
+
+.achievements__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.achievements__list li {
+  padding: 5px 50px 0 30px;
+}
+
+.achievements__list li::before {
+  content: url(../images/icn-star.png);
+  margin-right: 5px;
+}
+
+/* End achievements css */
+
+/* Start comment css */
+.comment{
+  margin-top: 20px;
+}
+
+.comment__text {
+  background-color: #ececec;
+  padding: 10px 40% 10px 10px;
+  position: relative;
+  border: #fff solid 1px;
+  font-size: 15px;
+}
+
+.comment__text p {
+  margin: 0;
+}
+
+.comment__text::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 20px;
+  border-width: 12px 13px 0 13px; 
+  
+  border-style: solid;
+  border-color: #eeeeee transparent transparent transparent;
+}
+
+.comment__author {
+  margin-top: 0;
+  padding-left: 50px;
+  font-size: 13px;
+}
+
+.comment__author p {
+  margin: 0;
+}
+
+.comment__author a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+.comment__author a:hover {
+  text-decoration: underline;
+}
+/* End comment css */
+
+/* Start form-comment css */
+.form-comment{
+  padding-top: 25px;
+}
+
+.form-comment h3 {
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    padding: 0 5px;
+    align-items: flex-start;
+}
+
+.form-group label {
+    width: 30%;
+    align-self: center;
+}
+
+.form-group input{
+  border: 2px solid #ececec;
+  align-self: center;
+}
+.form-group textarea {
+    flex: 1;
+    border: 2px solid #ececec;
+    padding: 8px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 50px;
+    margin-bottom: 10px;
+}
+/* End form-conment css */
