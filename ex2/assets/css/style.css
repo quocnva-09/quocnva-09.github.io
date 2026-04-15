@@ -46,7 +46,7 @@ main{
   width: auto;
   border: none;
   border-top: 1px solid #000;
-  margin: 10px 10px;
+  margin: 5px 10px 5px 10px;
   align-self: stretch;
 }
 
@@ -117,14 +117,15 @@ main{
   font-style: italic;
 }
 
-/* end wrapping for blog-detail__content-text */
-
-/* Wrapping for blog-detail__content-text */
 .blog-detail__text{
   height: auto;
   width: 100%;
 }
 
+/* end wrapping for blog-detail__content-text */
+
+
+/* wrapping for blog-detail-links */
 .blog-detail__links{
   height: auto;
   width: 100%;
@@ -278,7 +279,7 @@ main{
 }
 /* End of wrapping css blog-detail--news */
 
-/* Start blog-content-competions */
+/* Start blog-content--competions */
 .blog-content--competions{
   height: auto;
   margin-bottom: 20px;
@@ -299,7 +300,7 @@ main{
   background-color: #fff;
 }
 
-/*End of wrapping css blog-content-competions */
+/*End of wrapping css blog-content--competions */
 
 
 
