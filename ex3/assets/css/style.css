@@ -176,12 +176,10 @@ h3 {
 .form-group textarea {
     flex: 1;
     border: 2px solid #ececec;
-    padding: 8px;
-}
-
-.form-group textarea {
     resize: vertical;
     min-height: 50px;
     margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
 }
 /* End form-conment css */
