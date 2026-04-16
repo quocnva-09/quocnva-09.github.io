@@ -31,6 +31,17 @@ const exercises = [
       "Hình tham chiếu":
         "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/ex3/de_3.jpg?raw=true",
     }
+  },
+  {
+    category: "HTML/CSS",
+    name: "Tuần 1: Ngày 3 - Bài tập 4",
+    links: {
+      "Bài làm": "ex4/product-review.html",
+      "Mã nguồn":
+        "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/ex4",
+      "Hình tham chiếu":
+        "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/ex4/de_4.jpg?raw=true",
+    }
   }
 ];
 
