@@ -16,6 +16,8 @@ const barChartConfig = {
   barWidth: 35,
   gap: 25,
   colColor: "#3366cc",
-  labelColor: "#333",
+  labelColor: "#808080",
   textColor: "#000",
+  lineColor: "#e5e3e3",
+  lastLineColor: "#000",
 };
