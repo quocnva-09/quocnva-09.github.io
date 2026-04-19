@@ -34,13 +34,24 @@ const exercises = [
   },
   {
     category: "HTML/CSS",
-    name: "Tuần 1: Ngày 3 - Bài tập 4",
+    name: "Tuần 1: Ngày 3/4 - Bài tập 4",
     links: {
-      "Bài làm": "ex4/product-review.html",
+      "Bài làm": "ex4/src/product-page.html",
       "Mã nguồn":
         "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/ex4",
       "Hình tham chiếu":
         "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/ex4/de_4.jpg?raw=true",
+    }
+  },
+  {
+    category: "HTML/CSS",
+    name: "Tuần 1: Ngày 5 - Bài tập 5",
+    links: {
+      "Bài làm": "ex5/",
+      "Mã nguồn":
+        "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/ex5",
+      "Hình tham chiếu":
+        "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/ex5/de_5.png?raw=true",
     }
   }
 ];
