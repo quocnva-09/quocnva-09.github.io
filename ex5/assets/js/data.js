@@ -3,7 +3,8 @@ const barChartData = [
   { label: "B", value: 0.1 },
   { label: "C", value: 3.0 },
   { label: "E", value: 4.0 },
-  { label: "F", value: 4.0 },
+  { label: "F", value: 6.0 },
+  { label: "G", value: 6.0 },
 ];
 
 const barChartConfig = {
