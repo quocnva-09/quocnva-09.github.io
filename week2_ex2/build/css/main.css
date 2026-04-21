@@ -424,13 +424,13 @@ body {
 
 .header {
   background-color: #fff;
+  border-top: 4px solid #f0831e;
 }
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   padding: 0 0 20px;
-  border-top: 4px solid #f0831e;
 }
 .header__brand {
   display: flex;
@@ -515,6 +515,7 @@ body {
   flex-direction: column;
   gap: 30px;
   margin-bottom: 50px;
+  padding: 0;
 }
 @media (min-width: 768px) {
   .layout-main {
@@ -539,8 +540,9 @@ body {
 .hero {
   width: 100%;
   position: relative;
-  background-color: #fff;
+  background: linear-gradient(to bottom, #fff1dd 10%, #fff1dd 0%, #fff 90%, #fff 100%);
   margin-bottom: 40px;
+  padding-top: 15px;
 }
 .hero__container {
   padding: 0;
@@ -849,19 +851,16 @@ body {
   font-size: 18px;
   color: #66402b;
   margin: 0;
-  padding: 8px 0 8px 16px;
+  padding: 8px 0 0;
   position: relative;
-  border-bottom: 2px solid #f0831e;
+  border-bottom: 1px solid #fdebd5;
   margin-bottom: 25px;
 }
-.section-title::before {
+.section-title::after {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 6px;
-  height: 16px;
+  display: block;
+  width: 20%;
+  height: 2px;
   background-color: #f0831e;
 }
 
@@ -909,14 +908,12 @@ body {
 }
 
 .shop-widget {
-  border: 1px solid #ddd;
+  border: 5px solid #ddd;
   margin-bottom: 30px;
   background-color: #fff;
 }
 .shop-widget__header {
-  background-color: #fdebd5;
   padding: 15px;
-  border-bottom: 1px solid #ddd;
 }
 .shop-widget__title {
   margin: 0;
@@ -928,7 +925,7 @@ body {
   font-weight: normal;
 }
 .shop-widget__body {
-  padding: 15px;
+  padding: 0 15px 15px 15px;
 }
 .shop-widget__address {
   font-size: 13px;
@@ -939,7 +936,7 @@ body {
 .shop-widget__phone {
   display: flex;
   align-items: center;
-  color: #f0831e;
+  color: #5a3a28;
   margin-bottom: 15px;
 }
 .shop-widget__phone-icon {
@@ -949,8 +946,6 @@ body {
 }
 .shop-widget__phone-number {
   font-size: 24px;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
 }
 .shop-widget__hours {
   font-size: 12px;
@@ -959,38 +954,50 @@ body {
   margin-bottom: 15px;
 }
 .shop-widget__map {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .sidebar-nav {
+  padding-bottom: 12px;
   margin-bottom: 30px;
   border: 1px solid #ccc;
   background-color: #fff;
 }
 .sidebar-nav__title {
   margin: 0;
-  padding: 15px;
+  padding: 12px;
   font-size: 16px;
   text-align: center;
-  color: #fff;
-  background-color: rgb(153, 153, 153);
+  font-weight: normal;
+}
+.sidebar-nav__title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #f0831e;
+  margin: 10px auto 0;
 }
 .sidebar-nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.sidebar-nav__item {
-  border-top: 1px solid #ccc;
-}
 .sidebar-nav__link {
   display: block;
-  padding: 12px 15px 12px 30px;
+  padding: 12px 15px 5px 30px;
   color: #66402b;
   text-decoration: none;
-  font-weight: bold;
   position: relative;
-  background-color: #f9f9f9;
+  font-size: 14px;
+}
+.sidebar-nav__link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #5a3a28;
+  margin: 10px auto 0;
 }
 .sidebar-nav__link::before {
   content: "";
@@ -1014,13 +1021,11 @@ body {
 }
 .sidebar-nav__sublink {
   display: block;
-  padding: 10px 15px 10px 40px;
+  padding: 0 15px 0 40px;
   color: #66402b;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 12px;
   position: relative;
-  border-top: 1px dotted #ccc;
-  background-color: #fff;
 }
 .sidebar-nav__sublink::before {
   content: "▶";
@@ -1114,12 +1119,20 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #f0831e;
+  border-bottom: 1px solid #fdebd5;
   margin-bottom: 15px;
 }
 .news__header .section-title {
   border-bottom: none;
   margin-bottom: 0;
+  flex: 1;
+}
+.news__header .section-title::after {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 2px;
+  background-color: #f0831e;
 }
 .news__list {
   list-style: none;
@@ -1136,7 +1149,6 @@ body {
 }
 .news__date {
   font-weight: bold;
-  color: rgb(229, 0, 80);
   margin-right: 15px;
   white-space: nowrap;
 }

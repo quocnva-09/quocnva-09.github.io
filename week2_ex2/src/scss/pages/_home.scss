@@ -87,6 +87,7 @@
 
 // -----------------------------------------------------------------------------
 // News Section
+
 // -----------------------------------------------------------------------------
 .news {
   margin-bottom: 50px;
@@ -95,12 +96,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid $brand-orange;
+    border-bottom: 1px solid $light-orange;
     margin-bottom: 15px;
 
     .section-title {
       border-bottom: none;
       margin-bottom: 0;
+      flex: 1;
+      &::after {
+        content: "";
+        display: block;
+        width: 25%;
+        height: 2px;
+        background-color: $brand-orange;
+      }
     }
   }
 
@@ -121,7 +130,6 @@
 
   &__date {
     font-weight: bold;
-    color: $brand-color; // Or $brand-orange? The image is orange.
     margin-right: 15px;
     white-space: nowrap;
   }

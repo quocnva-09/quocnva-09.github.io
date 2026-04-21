@@ -1,14 +1,12 @@
 @use "../abstracts" as *;
 
 .shop-widget {
-  border: 1px solid #ddd;
+  border: 5px solid #ddd;
   margin-bottom: 30px;
   background-color: #fff;
 
   &__header {
-    background-color: $footer-bg-color; // Or light pink base
     padding: 15px;
-    border-bottom: 1px solid #ddd;
   }
 
   &__title {
@@ -23,7 +21,7 @@
   }
 
   &__body {
-    padding: 15px;
+    padding: 0 15px 15px 15px;
   }
 
   &__address {
@@ -36,7 +34,7 @@
   &__phone {
     display: flex;
     align-items: center;
-    color: $brand-orange;
+    color: #5a3a28;
     margin-bottom: 15px;
   }
 
@@ -48,8 +46,6 @@
 
   &__phone-number {
     font-size: 24px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
   }
 
   &__hours {
@@ -60,6 +56,6 @@
   }
 
   &__map {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 }

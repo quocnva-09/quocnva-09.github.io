@@ -1,17 +1,29 @@
 @use "../abstracts" as *;
 
+$font-title: 14px;
+$font-link: 12px;
+
 .sidebar-nav {
+  padding-bottom: 12px;
   margin-bottom: 30px;
   border: 1px solid #ccc;
   background-color: #fff;
 
   &__title {
     margin: 0;
-    padding: 15px;
+    padding: 12px;
     font-size: 16px;
     text-align: center;
-    color: #fff;
-    background-color: $mid-grey; // Just a placeholder, actually might be a gradient or brand color based on the design. Let's use brand color maybe? Wait, let's use a subtle color.
+    font-weight: normal;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $brand-orange;
+      margin: 10px auto 0;
+    }
   }
 
   &__list {
@@ -21,17 +33,24 @@
   }
 
   &__item {
-    border-top: 1px solid #ccc;
   }
 
   &__link {
     display: block;
-    padding: 12px 15px 12px 30px;
+    padding: 12px 15px 5px 30px;
     color: $text-color;
     text-decoration: none;
-    font-weight: bold;
     position: relative;
-    background-color: #f9f9f9;
+    font-size: $font-title;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $brown-color;
+      margin: 10px auto 0;
+    }
 
     &::before {
       content: "";
@@ -59,13 +78,11 @@
 
   &__sublink {
     display: block;
-    padding: 10px 15px 10px 40px;
+    padding: 0 15px 0 40px;
     color: $text-color;
     text-decoration: none;
-    font-size: 13px;
+    font-size: $font-link;
     position: relative;
-    border-top: 1px dotted #ccc;
-    background-color: #fff;
 
     &::before {
       content: "▶";
