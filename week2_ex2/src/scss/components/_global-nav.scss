@@ -5,7 +5,6 @@ $nav-font-size: 15px;
   background-color: $nav-bg-color;
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
-  font-family: $hirakakustd-w8-font-stack;
   font-size: $nav-font-size;
 
   &__container {
@@ -57,13 +56,11 @@ $nav-font-size: 15px;
     &--active {
       .global-nav__link {
         background:
-          repeating-linear-gradient(
-            -45deg,
+          repeating-linear-gradient(-45deg,
             rgba(255, 255, 255, 0.2),
             rgba(255, 255, 255, 0.2) 1.5px,
             transparent 1.5px,
-            transparent 3px
-          ),
+            transparent 3px),
           $brand-orange;
         color: #fff;
         border-radius: 3px;

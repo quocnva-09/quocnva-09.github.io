@@ -2,8 +2,12 @@
 
 .shop-widget {
   border: 5px solid #ddd;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
   background-color: #fff;
+  width: 100%;
+  /* Thu nhỏ phần width lại */
+  max-width: 230px;
+  /* Cân đối với các sidebar banners */
 
   &__header {
     padding: 15px;
@@ -46,6 +50,8 @@
 
   &__phone-number {
     font-size: 24px;
+    white-space: nowrap;
+    font-family: $century-gothic-font-stack;
   }
 
   &__hours {
@@ -57,5 +63,9 @@
 
   &__map {
     margin-bottom: 12px;
+  }
+
+  .button--block {
+    width: 100%;
   }
 }

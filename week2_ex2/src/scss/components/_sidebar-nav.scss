@@ -4,16 +4,30 @@ $font-title: 14px;
 $font-link: 12px;
 
 .sidebar-nav {
-  padding-bottom: 12px;
+  position: relative;
+  z-index: 0;
+  padding: 8px 8px 12px 8px;
   margin-bottom: 30px;
-  border: 1px solid #ccc;
-  background-color: #fff;
+  border: 6px double #f7e8d7;
+  border-radius: 3px;
+  max-width: 230px;
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: 10%;
+    width: 15%;
+    height: 5px;
+    background-color: #ffffff;
+    z-index: -1;
+  }
 
   &__title {
     margin: 0;
-    padding: 12px;
+    padding: 0;
     font-size: 16px;
-    text-align: center;
     font-weight: normal;
 
     &::after {
@@ -22,7 +36,7 @@ $font-link: 12px;
       width: 100%;
       height: 1px;
       background-color: $brand-orange;
-      margin: 10px auto 0;
+      margin: 0 auto 0;
     }
   }
 
@@ -32,37 +46,24 @@ $font-link: 12px;
     padding: 0;
   }
 
-  &__item {
-  }
+  &__item {}
 
   &__link {
-    display: block;
-    padding: 12px 15px 5px 30px;
+    padding: 12px 0 0 5px;
+    margin-bottom: 5px;
     color: $text-color;
     text-decoration: none;
-    position: relative;
     font-size: $font-title;
-
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 1px;
-      background-color: $brown-color;
-      margin: 10px auto 0;
-    }
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #c9c9c9;
 
     &::before {
-      content: "";
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 10px;
-      height: 10px;
-      border: 2px solid $brand-orange;
-      border-radius: 50%;
-      background-color: #fff;
+      content: "○";
+      font-size: 10px;
+      color: $brand-orange;
+      -webkit-text-stroke: 2px $brand-orange;
+      padding: 0 5px 0 0;
     }
 
     &:hover {
@@ -74,23 +75,25 @@ $font-link: 12px;
     list-style: none;
     margin: 0;
     padding: 0;
+
+    display: grid;
+    gap: 5px;
   }
 
   &__sublink {
     display: block;
-    padding: 0 15px 0 40px;
     color: $text-color;
     text-decoration: none;
     font-size: $font-link;
-    position: relative;
+    padding-left: 20px;
+
+    display: flex;
+    align-items: center;
 
     &::before {
       content: "▶";
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 10px;
+      font-size: 8px;
+      padding-right: 5px;
       color: $brand-orange;
     }
 

@@ -346,19 +346,25 @@ li {
 
 @font-face {
   font-family: "Century Gothic";
-  src: url("../../assets/fonts/centurygothic.ttf") format("truetype");
+  src: url("../../src/assets/fonts/centurygothic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Meiryo";
-  src: url("../../assets/fonts/meiryo.ttc") format("truetype");
+  src: url("../../src/assets/fonts/meiryo.ttc") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "HiraKakuStd-W8";
-  src: url("../../assets/fonts/HiraKakuStd-W8.otf") format("opentype");
+  src: url("../../src/assets/fonts/HiraKakuStd-W8.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "A-OTF-Ryumin-Pro-L-KL";
+  src: url("../../src/assets/fonts/A-OTF-Ryumin-Pro-L-KL.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -378,12 +384,18 @@ li {
  * 3. Leave some space on the edges, especially valuable on small screens
  */
 .container {
-  max-width: 960px; /* 1 */
-  margin-left: auto; /* 2 */
-  margin-right: auto; /* 2 */
-  padding-left: 20px; /* 3 */
-  padding-right: 20px; /* 3 */
-  width: 100%; /* 1 */
+  max-width: 960px;
+  /* 1 */
+  margin-left: auto;
+  /* 2 */
+  margin-right: auto;
+  /* 2 */
+  padding-left: 20px;
+  /* 3 */
+  padding-right: 20px;
+  /* 3 */
+  width: 100%;
+  /* 1 */
 }
 
 /**
@@ -393,7 +405,8 @@ li {
  */
 .hide-text {
   overflow: hidden;
-  padding: 0; /* 1 */
+  padding: 0;
+  /* 1 */
   text-indent: 101%;
   white-space: nowrap;
 }
@@ -532,7 +545,7 @@ body {
 }
 @media (min-width: 768px) {
   .layout-main__sidebar {
-    width: 260px;
+    max-width: 230px;
     flex-shrink: 0;
   }
 }
@@ -561,7 +574,7 @@ body {
 }
 .sidebar-banner {
   display: block;
-  width: 100%;
+  max-width: 230px;
 }
 .sidebar-banner img {
   display: block;
@@ -757,6 +770,7 @@ body {
   background-color: #333;
   color: #fff;
   transition: opacity 0.3s ease;
+  border-radius: 3px;
 }
 .button:hover {
   opacity: 0.8;
@@ -776,13 +790,13 @@ body {
 .button--block {
   display: flex;
   width: 100%;
+  padding: 5px 10px;
 }
 
 .global-nav {
   background-color: #f7f7f7;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  font-family: "HiraKakuStd-W8", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 15px;
 }
 .global-nav__container {
@@ -848,7 +862,8 @@ body {
 }
 
 .section-title {
-  font-size: 18px;
+  font-size: 19px;
+  font-weight: normal;
   color: #66402b;
   margin: 0;
   padding: 8px 0 0;
@@ -885,11 +900,12 @@ body {
   bottom: 0;
   left: 0;
   margin: 0;
+  width: 100%;
   padding: 10px 15px;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #f0831e;
-  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
   font-size: 14px;
+  font-family: "A-OTF-Ryumin-Pro-L-KL", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  text-shadow: -1px -1px 0 #fff, 0 -1px 0 #fff, 1px -1px 0 #fff, -1px 0 0 #fff, 1px 0 0 #fff, -1px 1px 0 #fff, 0 1px 0 #fff, 1px 1px 0 #fff;
 }
 .card-service__body {
   padding: 15px;
@@ -909,8 +925,12 @@ body {
 
 .shop-widget {
   border: 5px solid #ddd;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
   background-color: #fff;
+  width: 100%;
+  /* Thu nhỏ phần width lại */
+  max-width: 230px;
+  /* Cân đối với các sidebar banners */
 }
 .shop-widget__header {
   padding: 15px;
@@ -946,6 +966,8 @@ body {
 }
 .shop-widget__phone-number {
   font-size: 24px;
+  white-space: nowrap;
+  font-family: "Century Gothic", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 .shop-widget__hours {
   font-size: 12px;
@@ -956,18 +978,33 @@ body {
 .shop-widget__map {
   margin-bottom: 12px;
 }
+.shop-widget .button--block {
+  width: 100%;
+}
 
 .sidebar-nav {
-  padding-bottom: 12px;
+  position: relative;
+  z-index: 0;
+  padding: 8px 8px 12px 8px;
   margin-bottom: 30px;
-  border: 1px solid #ccc;
-  background-color: #fff;
+  border: 6px double #f7e8d7;
+  border-radius: 3px;
+  max-width: 230px;
+}
+.sidebar-nav::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 10%;
+  width: 15%;
+  height: 5px;
+  background-color: #ffffff;
+  z-index: -1;
 }
 .sidebar-nav__title {
   margin: 0;
-  padding: 12px;
+  padding: 0;
   font-size: 16px;
-  text-align: center;
   font-weight: normal;
 }
 .sidebar-nav__title::after {
@@ -976,7 +1013,7 @@ body {
   width: 100%;
   height: 1px;
   background-color: #f0831e;
-  margin: 10px auto 0;
+  margin: 0 auto 0;
 }
 .sidebar-nav__list {
   list-style: none;
@@ -984,32 +1021,21 @@ body {
   padding: 0;
 }
 .sidebar-nav__link {
-  display: block;
-  padding: 12px 15px 5px 30px;
+  padding: 12px 0 0 5px;
+  margin-bottom: 5px;
   color: #66402b;
   text-decoration: none;
-  position: relative;
   font-size: 14px;
-}
-.sidebar-nav__link::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #5a3a28;
-  margin: 10px auto 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #c9c9c9;
 }
 .sidebar-nav__link::before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 10px;
-  border: 2px solid #f0831e;
-  border-radius: 50%;
-  background-color: #fff;
+  content: "○";
+  font-size: 10px;
+  color: #f0831e;
+  -webkit-text-stroke: 2px #f0831e;
+  padding: 0 5px 0 0;
 }
 .sidebar-nav__link:hover {
   background-color: #f0f0f0;
@@ -1018,22 +1044,22 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  gap: 5px;
 }
 .sidebar-nav__sublink {
   display: block;
-  padding: 0 15px 0 40px;
   color: #66402b;
   text-decoration: none;
   font-size: 12px;
-  position: relative;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
 }
 .sidebar-nav__sublink::before {
   content: "▶";
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 10px;
+  font-size: 8px;
+  padding-right: 5px;
   color: #f0831e;
 }
 .sidebar-nav__sublink:hover {
@@ -1041,6 +1067,34 @@ body {
   color: #f0831e;
 }
 
+.news {
+  color: #66402b;
+}
+.news__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f0831e;
+  margin-bottom: 15px;
+}
+.news__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.news__item {
+  display: flex;
+  padding: 15px 0;
+  border-bottom: 1px dotted #ccc;
+}
+.news__item:last-child {
+  border-bottom: none;
+}
+.news__date {
+  font-weight: bold;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
 .concept {
   margin-bottom: 50px;
 }

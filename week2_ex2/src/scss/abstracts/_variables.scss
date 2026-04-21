@@ -4,32 +4,32 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack:
-  "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
+$text-font-stack: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
   sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
-$code-font-stack:
-  "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco",
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco",
   monospace !default;
 
 /// Century Gothic font family
 /// @type List
-$century-gothic-font-stack:
-  "Century Gothic", "Helvetica Neue Light", "Helvetica Neue", "Helvetica",
+$century-gothic-font-stack: "Century Gothic", "Helvetica Neue Light", "Helvetica Neue", "Helvetica",
   "Arial", sans-serif !default;
 
 /// Meiryo font family
 /// @type List
-$meiryo-font-stack:
-  "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
+$meiryo-font-stack: "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
   sans-serif !default;
 
 /// HiraKakuStd-W8 font family
 /// @type List
-$hirakakustd-w8-font-stack:
-  "HiraKakuStd-W8", "Helvetica Neue Light", "Helvetica Neue", "Helvetica",
+$hirakakustd-w8-font-stack: "HiraKakuStd-W8", "Helvetica Neue Light", "Helvetica Neue", "Helvetica",
+  "Arial", sans-serif !default;
+
+/// A-OTF-Ryumin-Pro-L-KL font family
+/// @type List
+$a-otf-ryumin-pro-l-kl-font-stack: "A-OTF-Ryumin-Pro-L-KL", "Helvetica Neue Light", "Helvetica Neue", "Helvetica",
   "Arial", sans-serif !default;
 
 /// Copy text color
@@ -82,7 +82,7 @@ $breakpoints: (
   "small": 320px,
   "medium": 768px,
   "large": 1024px,
-) !default;
+  ) !default;
 
 // / Relative or absolute URL where all assets are served from
 // / @type String
@@ -90,4 +90,5 @@ $breakpoints: (
 // /   $base-url: 'https://cdn.example.com/assets/';
 $base-url: "/assets/" !default;
 
-$footer-title-nav-before: url("../../assets/images/title-nav-footer.png");
+$footer-title-nav-before: url("../../assets/images/title-nav-footer.png"
+);

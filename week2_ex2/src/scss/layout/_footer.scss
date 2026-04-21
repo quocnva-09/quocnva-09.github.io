@@ -13,13 +13,11 @@ $font-size-menu: 13px;
   &__top {
     // Kẻ sọc xiên chéo nền giống logic global-nav__link
     background:
-      repeating-linear-gradient(
-        -45deg,
+      repeating-linear-gradient(-45deg,
         rgba(255, 255, 255, 0.4),
         rgba(255, 255, 255, 0.4) 1.5px,
         transparent 1.5px,
-        transparent 3px
-      ),
+        transparent 3px),
       $footer-bg-color;
     padding: 30px 0;
   }
@@ -37,6 +35,7 @@ $font-size-menu: 13px;
 
   &__logo {
     display: block;
+
     img {
       max-width: 100%;
       height: auto;

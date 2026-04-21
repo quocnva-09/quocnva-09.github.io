@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+.news {
+  // Styles for the main news container
+  color: $text-color;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid $brand-orange;
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: 1px dotted #ccc;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__date {
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+
+  &__text {}
+}

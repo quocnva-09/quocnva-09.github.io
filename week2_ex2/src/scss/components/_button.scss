@@ -13,6 +13,7 @@
   background-color: #333;
   color: #fff;
   transition: opacity 0.3s ease;
+  border-radius: 3px;
 
   &:hover {
     opacity: 0.8;
@@ -36,5 +37,6 @@
   &--block {
     display: flex;
     width: 100%;
+    padding: 5px 10px;
   }
 }

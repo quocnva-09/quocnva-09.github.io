@@ -4,21 +4,28 @@
 
 @font-face {
   font-family: "Century Gothic";
-  src: url("../../assets/fonts/centurygothic.ttf") format("truetype");
+  src: url("../../src/assets/fonts/centurygothic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Meiryo";
-  src: url("../../assets/fonts/meiryo.ttc") format("truetype");
+  src: url("../../src/assets/fonts/meiryo.ttc") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "HiraKakuStd-W8";
-  src: url("../../assets/fonts/HiraKakuStd-W8.otf") format("opentype");
+  src: url("../../src/assets/fonts/HiraKakuStd-W8.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "A-OTF-Ryumin-Pro-L-KL";
+  src: url("../../src/assets/fonts/A-OTF-Ryumin-Pro-L-KL.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
