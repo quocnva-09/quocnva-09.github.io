@@ -1,0 +1,40 @@
+@use "../abstracts" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &__icon {
+    font-size: 10px;
+    margin-right: 5px;
+  }
+
+  &--primary {
+    background-color: $brand-orange;
+    color: #fff;
+  }
+
+  &--small {
+    padding: 5px 15px;
+    font-size: 12px;
+  }
+
+  &--block {
+    display: flex;
+    width: 100%;
+  }
+}

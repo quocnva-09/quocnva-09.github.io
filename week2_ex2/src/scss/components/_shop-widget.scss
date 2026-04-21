@@ -1,0 +1,65 @@
+@use "../abstracts" as *;
+
+.shop-widget {
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+  background-color: #fff;
+
+  &__header {
+    background-color: $footer-bg-color; // Or light pink base
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 18px;
+    color: $text-color;
+
+    &-sub {
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+
+  &__body {
+    padding: 15px;
+  }
+
+  &__address {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    color: $brand-orange;
+    margin-bottom: 15px;
+  }
+
+  &__phone-icon {
+    width: 24px;
+    height: auto;
+    margin-right: 10px;
+  }
+
+  &__phone-number {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+  }
+
+  &__hours {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  &__map {
+    margin-bottom: 15px;
+  }
+}

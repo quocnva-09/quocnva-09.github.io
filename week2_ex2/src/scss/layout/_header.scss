@@ -1,0 +1,110 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+@use "../abstracts" as *;
+
+$font-size-header-detail: 12px;
+
+.header {
+  background-color: #fff;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0 0 20px;
+    border-top: 4px solid $brand-orange;
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__desc {
+    justify-self: flex-start;
+    font-size: $font-size-header-detail;
+    color: $dark-grey;
+    padding-top: 10px;
+    margin: 0;
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 15px;
+  }
+
+  &__logo-link {
+    display: block;
+  }
+
+  &__logo-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    padding-top: 40px;
+  }
+
+  &__address {
+    font-size: $font-size-header-detail;
+    margin: 0 0 5px;
+    color: $dark-grey;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+
+  &__phone-icon {
+    width: 28px; // Adjust based on icon size
+    height: auto;
+  }
+
+  &__phone-number {
+    font-size: 28px;
+    font-family: $century-gothic-font-stack;
+    color: $brand-orange;
+    line-height: 1;
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    font-size: $font-size-header-detail;
+    color: $dark-grey;
+  }
+
+  &__hours {
+    margin: 0;
+    text-align: right;
+    line-height: 1.4;
+  }
+
+  &__last-order {
+    display: block;
+    font-size: $font-size-header-detail;
+    margin: 0;
+  }
+
+  &__holiday {
+    margin: 0;
+    color: $brand-orange;
+    font-weight: bold;
+    // adding top margin equivalent to line-height to align it visually with the top line of hours
+  }
+}

@@ -1,0 +1,96 @@
+@use "../abstracts" as *;
+$nav-font-size: 15px;
+
+.global-nav {
+  background-color: $nav-bg-color;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  font-family: $hirakakustd-w8-font-stack;
+  font-size: $nav-font-size;
+
+  &__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: stretch;
+    width: 100%;
+  }
+
+  &__item {
+    flex: 1;
+    text-align: center;
+    position: relative;
+
+    // The separator line between items (on the right)
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 50%;
+      background-color: $border-color;
+      z-index: 1;
+    }
+
+    // The separator line before the first item (on the left)
+    &:first-child::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 50%;
+      background-color: $border-color;
+      z-index: 1;
+    }
+
+    // For active item, we want a rounded background with spacing and diagonal stripes
+    &--active {
+      .global-nav__link {
+        background:
+          repeating-linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.2) 1.5px,
+            transparent 1.5px,
+            transparent 3px
+          ),
+          $brand-orange;
+        color: #fff;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $text-color;
+    margin: 6px; // creates the gap from the borders and separators
+    padding: 10px 0; // compensates to maintain overall height (6+9 = 15)    color: $text-color;
+    text-decoration: none;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+
+    &:hover {
+      background-color: $nav-bg-color;
+      color: $brand-orange;
+      text-decoration: none;
+    }
+  }
+
+  // Ensure active state hover doesn't break
+  &__item--active &__link:hover {
+    background-color: $brand-orange;
+    color: #fff;
+  }
+}
