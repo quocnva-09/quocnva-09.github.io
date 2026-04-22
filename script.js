@@ -8,7 +8,7 @@ const exercises = [
         "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/ex1",
       "Hình tham chiếu":
         "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/ex1/de_1.jpg?raw=true",
-    }
+    },
   },
   {
     category: "HTML/CSS",
@@ -19,7 +19,7 @@ const exercises = [
         "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/ex2",
       "Hình tham chiếu":
         "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/ex2/de_2.jpg?raw=true",
-    }
+    },
   },
   {
     category: "HTML/CSS",
@@ -30,7 +30,7 @@ const exercises = [
         "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/ex3",
       "Hình tham chiếu":
         "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/ex3/de_3.jpg?raw=true",
-    }
+    },
   },
   {
     category: "HTML/CSS",
@@ -41,7 +41,7 @@ const exercises = [
         "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/ex4",
       "Hình tham chiếu":
         "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/ex4/de_4.jpg?raw=true",
-    }
+    },
   },
   {
     category: "HTML/CSS",
@@ -52,7 +52,7 @@ const exercises = [
         "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/ex5",
       "Hình tham chiếu":
         "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/ex5/de_5.png?raw=true",
-    }
+    },
   },
   {
     category: "HTML/CSS",
@@ -63,8 +63,19 @@ const exercises = [
         "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/week2_ex2",
       "Hình tham chiếu":
         "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/week2_ex2/de_w2d2.jpg?raw=true",
-    }
-  }
+    },
+  },
+  {
+    category: "HTML/CSS",
+    name: "Tuần 2: Ngày 3 - Bài tập 3",
+    links: {
+      "Bài làm": "week2_ex3/",
+      "Mã nguồn":
+        "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/week2_ex3",
+      "Hình tham chiếu":
+        "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/week2_ex3/de_w2d3.jpg?raw=true",
+    },
+  },
 ];
 
 const container = document.getElementById("exercise-list");
