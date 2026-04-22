@@ -984,10 +984,10 @@ body {
   margin: 0;
   font-size: 18px;
   color: #66402b;
+  font-weight: normal;
 }
 .shop-widget__title-sub {
   font-size: 14px;
-  font-weight: normal;
 }
 .shop-widget__body {
   padding: 0 15px 15px 15px;
@@ -996,13 +996,13 @@ body {
   font-size: 13px;
   line-height: 1.5;
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .shop-widget__phone {
   display: flex;
   align-items: center;
   color: #5a3a28;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .shop-widget__phone-icon {
   width: 24px;
@@ -1211,6 +1211,9 @@ body {
   margin-bottom: 5px;
   padding-left: 15px;
   text-indent: -15px;
+}
+.concept__list li a {
+  color: #66402b;
 }
 
 .menu-showcase {

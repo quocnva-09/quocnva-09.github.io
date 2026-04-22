@@ -64,6 +64,10 @@
       margin-bottom: 5px;
       padding-left: 15px;
       text-indent: -15px; // Hack for nice bullet alignment
+
+      a {
+        color: $text-color;
+      }
     }
   }
 }
