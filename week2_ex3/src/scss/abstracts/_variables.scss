@@ -1,0 +1,107 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Main body font family
+/// @type List
+$text-font-stack:
+  "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
+  sans-serif !default;
+
+/// Title font family
+/// @type List
+$title-font-stack:
+  "ShinGoPro-Med", "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
+  sans-serif !default;
+
+/// Article title font family
+/// @type List
+$title-article-font-stack:
+  "ShinGoPro-DeB", "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
+  sans-serif !default;
+
+/// Phone font family
+/// @type List
+$phone-font-stack:
+  "MigMix-1P-bold", "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
+  sans-serif !default;
+
+/// ShinMGoPro font family
+/// @type List
+$shinmgopro-font-stack:
+  "ShinMGoPro-Med", "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
+  sans-serif !default;
+/// Copy text color
+/// @type Color
+$text-color: #000 !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(229, 0, 80) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+$dark-grey: rgb(68, 68, 68) !default;
+
+/// Brand Orange (Header nav active state, phone number)
+$brand-orange: #f0831e !default;
+
+/// Holiday Red
+$holiday-red: #ea5514 !default;
+
+/// Primary light background (Header top)
+$nav-bg-color: #f7f7f7 !default;
+
+/// Footer light background
+$footer-bg-color: #fdebd5 !default;
+
+/// Border color (nav separators)
+$border-color: #dbdada !default;
+
+/// Brown color
+$brown-color: #5a3a28 !default;
+
+$light-orange: #fdebd5 !default;
+
+$button-color: #fc9204;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 960px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  "small": 320px,
+  "medium": 768px,
+  "large": 1024px,
+) !default;
+
+// / Relative or absolute URL where all assets are served from
+// / @type String
+// / @example scss - When using a CDN
+// /   $base-url: 'https://cdn.example.com/assets/';
+$base-url: "/assets/" !default;
+
+$footer-title-nav-before: url("../../assets/images/title-nav-footer.png");
+
+// week2_ex3 colors
+$red-color: #e00012;
+$yellow-color: #ffce00;
+$side-bar-info-bg-color: #fff0b2;
+$gradient-background-hero: #ffd31c;
+
+// Map the specific requested variables to the stacks
+$font-title: $title-font-stack;
+$font-title-article: $title-article-font-stack;
+$font-family: $text-font-stack;
+$font-phone: $phone-font-stack;
+$font-shin-m-gopro: $shinmgopro-font-stack;

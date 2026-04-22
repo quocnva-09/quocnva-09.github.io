@@ -1,0 +1,210 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+@use "../abstracts" as *;
+
+$font-size-info: 12px;
+$font-size-nav: 14px;
+$font-size-menu: 13px;
+
+.footer {
+  font-family: $text-font-stack;
+
+  &__top {
+    // Kẻ sọc xiên chéo nền giống logic global-nav__link
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.4) 1.5px,
+        transparent 1.5px,
+        transparent 3px
+      ),
+      $footer-bg-color;
+    padding: 30px 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__info {
+    font-size: $font-size-info;
+    width: 38%;
+  }
+
+  &__logo {
+    display: block;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      max-height: auto;
+    }
+  }
+
+  &__address {
+    color: $text-color;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__booking-tag {
+    background-color: $brand-orange;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $brand-orange;
+  }
+
+  &__phone-icon {
+    width: 22px;
+    height: auto;
+  }
+
+  &__phone-number {
+    font-size: 22px;
+    font-family: $font-family;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 25px;
+    border: 1px solid #e0c8b0;
+    padding: 20px 5px 20px 30px;
+    background-color: transparent;
+    width: 34%;
+  }
+
+  &__nav-col {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+  }
+
+  &__nav-link {
+    font-size: $font-size-nav;
+    color: $text-color;
+    text-decoration: none;
+    position: relative;
+    padding-left: 14px;
+    display: block;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 5px solid $text-color;
+    }
+  }
+
+  &__menu {
+    background: #fff;
+    padding: 20px 30px 20px 30px;
+    width: 22%;
+  }
+
+  &__menu-title {
+    font-size: 16px;
+    font-weight: normal;
+    color: $text-color;
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    white-space: nowrap;
+
+    &::before {
+      content: "";
+      background-image: url("../../src/assets/images/title-nav-footer.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: inline-block;
+      height: 14px;
+      width: 14px;
+      margin-right: 5px;
+    }
+  }
+
+  &__menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__menu-link {
+    font-size: $font-size-menu;
+    color: $text-color;
+    text-decoration: none;
+    position: relative;
+    padding-left: 14px;
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 5px solid $text-color;
+    }
+  }
+
+  &__bottom {
+    background-color: $brand-orange;
+    text-align: center;
+    padding: 5px 0;
+  }
+
+  &__copy {
+    color: #fff;
+    font-size: $font-size-menu;
+    margin: 0;
+  }
+}

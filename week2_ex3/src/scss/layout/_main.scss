@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+@use "sass:map";
+
+.layout-main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+  padding: 0;
+
+  @media (min-width: map.get($breakpoints, "medium")) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0; // Prevent flex item from blowing out
+  }
+
+  &__sidebar {
+    width: 100%;
+
+    @media (min-width: map.get($breakpoints, "medium")) {
+      max-width: 230px;
+      flex-shrink: 0;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use "../abstracts" as *;
+
+.news {
+  margin-bottom: 50px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $light-orange;
+    margin-bottom: 15px;
+
+    .section-title {
+      border-bottom: none;
+      margin-bottom: 0;
+      flex: 1;
+      &::after {
+        content: "";
+        display: block;
+        width: 25%;
+        height: 2px;
+        background-color: $brand-orange;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: baseline;
+    padding: 12px 10px;
+    border-bottom: 1px dashed #ccc;
+    font-size: 14px;
+    color: $text-color;
+  }
+
+  &__date {
+    font-weight: bold;
+    margin-right: 15px;
+    white-space: nowrap;
+  }
+
+  &__text {
+    flex: 1;
+  }
+}

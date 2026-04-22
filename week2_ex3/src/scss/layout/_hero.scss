@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+.hero {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    #fff1dd 10%,
+    #fff1dd 0%,
+    #fff 90%,
+    #fff 100%
+  );
+  margin-bottom: 40px;
+  padding-top: 15px;
+
+  &__container {
+    padding: 0; // Remove container padding if we want the image to span fully inside the container width
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,59 @@
+@use "../abstracts" as *;
+
+.card-service {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #eee;
+
+  &__image-wrapper {
+    margin: 0;
+    position: relative;
+    width: 100%;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    font-family: $text-font-stack;
+    //text shadow dàn đều từ tâm text
+    text-shadow:
+      -1px -1px 0 #fff,
+      0 -1px 0 #fff,
+      1px -1px 0 #fff,
+      -1px 0 0 #fff,
+      1px 0 0 #fff,
+      -1px 1px 0 #fff,
+      0 1px 0 #fff,
+      1px 1px 0 #fff;
+  }
+
+  &__body {
+    padding: 15px;
+    background-color: #f9f9f9;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__desc {
+    font-size: 13px;
+    color: $text-color;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+}

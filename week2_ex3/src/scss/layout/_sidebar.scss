@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+.sidebar {
+  &__banners {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  &-banner {
+    display: block;
+    max-width: 230px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover img {
+      opacity: 0.8;
+    }
+  }
+
+  &__recruitment {
+    margin-bottom: 30px;
+  }
+}
