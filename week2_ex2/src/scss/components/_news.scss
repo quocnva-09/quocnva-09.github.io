@@ -37,6 +37,10 @@
     border-bottom: 1px dashed #ccc;
     font-size: 14px;
     color: $text-color;
+
+    a {
+      color: $text-color;
+    }
   }
 
   &__date {
