@@ -2,6 +2,8 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
+@use "variables" as *;
+
 /// Event wrapper
 /// @author Harry Roberts
 /// @param {Bool} $self [false] - Whether or not to include current selector
@@ -34,3 +36,15 @@
   }
 }
 
+/// Background with diagonal stripes for active items
+@mixin striped-bg($color: $brand-orange) {
+  background-color: $color;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 0.5px,
+    rgba(255, 255, 255, 0.3) 1px,
+    rgba(255, 255, 255, 0.3) 1.5px
+  );
+  color: #fff;
+}

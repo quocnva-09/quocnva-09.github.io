@@ -1,5 +1,6 @@
 @use "../abstracts" as *;
 $nav-font-size: 15px;
+$sub-nav-color: #ffc472;
 
 .global-nav {
   background-color: $nav-bg-color;
@@ -55,16 +56,16 @@ $nav-font-size: 15px;
     // For active item, we want a rounded background with spacing and diagonal stripes
     &--active {
       .global-nav__link {
-        background:
-          repeating-linear-gradient(-45deg,
-            rgba(255, 255, 255, 0.2),
-            rgba(255, 255, 255, 0.2) 1.5px,
-            transparent 1.5px,
-            transparent 3px),
-          $brand-orange;
-        color: #fff;
+        @include striped-bg($button-color);
         border-radius: 3px;
       }
+    }
+
+    // Hover state to show sub-menu
+    &:hover .global-nav__sub-list {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
     }
   }
 
@@ -87,7 +88,53 @@ $nav-font-size: 15px;
 
   // Ensure active state hover doesn't break
   &__item--active &__link:hover {
-    background-color: $brand-orange;
-    color: #fff;
+    @include striped-bg($button-color);
+  }
+
+  // Mega-menu / Sub-list styles
+  &__sub-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; // Matches parent width to align side-by-side
+    background-color: $sub-nav-color; // Light orange background as in design
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+
+    // Animation
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &__sub-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); // Separator between sub items
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__sub-link {
+    display: block;
+    padding: 10px 5px;
+    margin: 5px;
+    color: $text-color;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
+
+    &:hover,
+    &--active {
+      @include striped-bg($button-color);
+      border-radius: 3px;
+    }
   }
 }
