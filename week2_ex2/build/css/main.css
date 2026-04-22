@@ -840,7 +840,7 @@ body {
 }
 .global-nav__item--active .global-nav__link {
   background-color: #fc9204;
-  background-image: repeating-linear-gradient(-45deg, transparent, transparent 0.5px, rgba(255, 255, 255, 0.3) 1px, rgba(255, 255, 255, 0.3) 1.5px);
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, rgba(255, 255, 255, 0.3) 1px, rgba(255, 255, 255, 0.3) 2px);
   color: #fff;
   border-radius: 3px;
 }
@@ -864,7 +864,7 @@ body {
 }
 .global-nav__item--active .global-nav__link:hover {
   background-color: #fc9204;
-  background-image: repeating-linear-gradient(-45deg, transparent, transparent 0.5px, rgba(255, 255, 255, 0.3) 1px, rgba(255, 255, 255, 0.3) 1.5px);
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, rgba(255, 255, 255, 0.3) 1px, rgba(255, 255, 255, 0.3) 2px);
   color: #fff;
 }
 .global-nav__sub-list {
@@ -901,7 +901,7 @@ body {
 }
 .global-nav__sub-link:hover, .global-nav__sub-link--active {
   background-color: #fc9204;
-  background-image: repeating-linear-gradient(-45deg, transparent, transparent 0.5px, rgba(255, 255, 255, 0.3) 1px, rgba(255, 255, 255, 0.3) 1.5px);
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, rgba(255, 255, 255, 0.3) 1px, rgba(255, 255, 255, 0.3) 2px);
   color: #fff;
   border-radius: 3px;
 }
