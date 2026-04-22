@@ -1,20 +1,16 @@
 @use "../abstracts" as *;
 
 .section-title {
-  font-size: 19px;
-  font-weight: normal;
+  font-size: 17px;
+  letter-spacing: 2px;
+  font-family: $font-shin-m-gopro;
+  font-weight: bold;
   color: $text-color;
-  margin: 0;
-  padding: 8px 0 0;
-  position: relative;
-  border-bottom: 1px solid $light-orange;
-  margin-bottom: 25px;
-
-  &::after {
-    content: "";
-    display: block;
-    width: 20%;
-    height: 2px;
-    background-color: $brand-orange;
-  }
+  margin: 0 0 20px 0;
+  padding: 10px 10px;
+  border-top: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  border-left: 1px solid $border-color;
+  border-bottom: 2px solid $red-color;
+  background: linear-gradient(to bottom, #fff, #f2f1f1);
 }

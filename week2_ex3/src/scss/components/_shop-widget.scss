@@ -1,71 +1,51 @@
 @use "../abstracts" as *;
 
 .shop-widget {
-  border: 5px solid #ddd;
-  margin: 0 0 30px 0;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
   background-color: #fff;
-  width: 100%;
-  /* Thu nhỏ phần width lại */
-  max-width: 230px;
-  /* Cân đối với các sidebar banners */
 
   &__header {
-    padding: 15px;
+    background-color: $red-color;
+    padding: 10px;
+    text-align: center;
   }
 
   &__title {
     margin: 0;
-    font-size: 18px;
-    color: $text-color;
-    font-weight: normal;
-
-    &-sub {
-      font-size: 14px;
-    }
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
   }
 
   &__body {
-    padding: 0 15px 15px 15px;
+    padding: 15px;
   }
 
-  &__address {
-    font-size: 13px;
-    line-height: 1.5;
-    margin-top: 0;
-    margin-bottom: 5px;
+  &__company-name {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
   }
 
-  &__phone {
-    display: flex;
-    align-items: center;
-    color: #5a3a28;
+  &__info {
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
     margin-bottom: 10px;
   }
 
-  &__phone-icon {
-    width: 24px;
-    height: auto;
-    margin-right: 10px;
-  }
-
-  &__phone-number {
-    font-size: 24px;
-    white-space: nowrap;
-    font-family: $text-font-stack;
-  }
-
-  &__hours {
-    font-size: 12px;
-    line-height: 1.6;
-    margin-top: 0;
-    margin-bottom: 15px;
-  }
-
-  &__map {
-    margin-bottom: 12px;
-  }
-
-  .button--block {
-    width: 100%;
+  &__action {
+    text-align: center;
   }
 }

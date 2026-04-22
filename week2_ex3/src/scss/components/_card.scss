@@ -1,10 +1,26 @@
 @use "../abstracts" as *;
 
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 10px;
+
+  .card-service {
+    flex: 1 1 calc(33.333% - 15px);
+    min-width: 0; // allow shrinking
+  }
+}
+
+.service__action {
+  text-align: right;
+  margin-bottom: 40px;
+}
+
 .card-service {
   display: flex;
   flex-direction: column;
   height: 100%;
-  border: 1px solid #eee;
 
   &__image-wrapper {
     margin: 0;
@@ -18,42 +34,44 @@
     height: auto;
   }
 
-  &__image-caption {
+  &__caption {
     position: absolute;
     bottom: 0;
     left: 0;
     margin: 0;
     width: 100%;
-    padding: 10px 15px;
-    background-color: rgba(255, 255, 255, 0.5);
-    font-size: 14px;
-    font-family: $text-font-stack;
-    //text shadow dàn đều từ tâm text
+    min-height: 52px;
+    padding: 5px;
+    @include striped-bg(transparent, 2px, 4px);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 1.4;
+    color: $text-color;
+
+    //căn giữa
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    //stroke
     text-shadow:
       -1px -1px 0 #fff,
-      0 -1px 0 #fff,
       1px -1px 0 #fff,
-      -1px 0 0 #fff,
-      1px 0 0 #fff,
       -1px 1px 0 #fff,
-      0 1px 0 #fff,
       1px 1px 0 #fff;
   }
 
   &__body {
-    padding: 15px;
-    background-color: #f9f9f9;
+    padding: 10px 0;
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
   }
 
   &__desc {
-    font-size: 13px;
+    font-size: 12px;
     color: $text-color;
     line-height: 1.6;
-    margin-top: 0;
-    margin-bottom: 20px;
-    flex-grow: 1;
+    margin: 0;
   }
 }

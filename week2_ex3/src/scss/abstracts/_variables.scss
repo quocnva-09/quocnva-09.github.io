@@ -11,26 +11,31 @@ $text-font-stack:
 /// Title font family
 /// @type List
 $title-font-stack:
-  "ShinGoPro-Med", "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
-  sans-serif !default;
+  "ShinGoPro-Med", "Meiryo", "Helvetica Neue Light", "Helvetica Neue",
+  "Helvetica", "Arial", sans-serif !default;
 
 /// Article title font family
 /// @type List
 $title-article-font-stack:
-  "ShinGoPro-DeB", "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
-  sans-serif !default;
+  "ShinGoPro-DeB", "Meiryo", "Helvetica Neue Light", "Helvetica Neue",
+  "Helvetica", "Arial", sans-serif !default;
 
 /// Phone font family
 /// @type List
 $phone-font-stack:
-  "MigMix-1P-bold", "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
-  sans-serif !default;
+  "MigMix-1P-bold", "Meiryo", "Helvetica Neue Light", "Helvetica Neue",
+  "Helvetica", "Arial", sans-serif !default;
 
 /// ShinMGoPro font family
 /// @type List
 $shinmgopro-font-stack:
-  "ShinMGoPro-Med", "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
-  sans-serif !default;
+  "ShinMGoPro-Med", "Meiryo", "Helvetica Neue Light", "Helvetica Neue",
+  "Helvetica", "Arial", sans-serif !default;
+
+$ms-gothic-font-stack:
+  "MS Gothic", "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica",
+  "Arial", sans-serif !default;
+
 /// Copy text color
 /// @type Color
 $text-color: #000 !default;
@@ -105,3 +110,21 @@ $font-title-article: $title-article-font-stack;
 $font-family: $text-font-stack;
 $font-phone: $phone-font-stack;
 $font-shin-m-gopro: $shinmgopro-font-stack;
+
+//image
+$img-side-banner-1: url("../../src/assets/images/img-side-banner-1.png")
+  no-repeat center/cover;
+$img-side-banner-2: url("../../src/assets/images/img-side-banner-2.png")
+  no-repeat center/cover;
+$img-section-1: url("../../src/assets/images/img-section-1.png") no-repeat
+  center/cover;
+$img-section-2-1: url("../../src/assets/images/img-section-2-1.png") no-repeat
+  center/cover;
+$img-section-2-2: url("../../src/assets/images/img-section-2-2.png") no-repeat
+  center/cover;
+$img-section-2-3: url("../../src/assets/images/img-section-2-3.png") no-repeat
+  center/cover;
+$img-section-3: url("../../src/assets/images/img-section-3.png") no-repeat
+  center/cover;
+$img-footer-banner: url("../../src/assets/images/img-footer-banner.png")
+  no-repeat center/cover;

@@ -21,10 +21,12 @@
 @use 'components/global-nav';
 @use 'components/section-title';
 @use 'components/card';
+@use 'components/concept';
 @use 'components/shop-widget';
 @use 'components/sidebar-nav';
 @use 'components/news';
-
+@use 'components/checkpoint';
+@use 'components/mega-menu';
 // 5. Pages
 @use 'pages/home';
 

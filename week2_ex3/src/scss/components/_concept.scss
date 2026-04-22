@@ -1,0 +1,44 @@
+@use "../abstracts" as *;
+
+.concept {
+  margin-bottom: 50px;
+
+  &__inner {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  &__image-wrapper {
+    flex: 0 0 auto;
+    max-width: 160px;
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__title {
+    color: $red-color;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+  }
+
+  &__desc {
+    font-size: 13px;
+    color: $text-color;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+  }
+
+  &__action {
+    text-align: right;
+  }
+}

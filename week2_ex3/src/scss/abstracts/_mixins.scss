@@ -37,14 +37,22 @@
 }
 
 /// Background with diagonal stripes for active items
-@mixin striped-bg($color: $brand-orange) {
-  background-color: $color;
+@mixin striped-bg($color: $brand-orange, $pos-x: 0.5px, $pos-y: 1px) {
+  background: $color;
   background-image: repeating-linear-gradient(
     -45deg,
     transparent,
-    transparent 0.5px,
-    rgba(255, 255, 255, 0.3) 1px,
-    rgba(255, 255, 255, 0.3) 1.5px
+    transparent $pos-x,
+    rgba(255, 255, 255, 0.5) $pos-x,
+    rgba(255, 255, 255, 0.5) $pos-y
   );
   color: #fff;
+}
+
+@mixin text-stroke($color: #fff, $size: 1px) {
+  text-shadow:
+    #{$size * -1} #{$size * -1} 0 $color,
+    #{$size} #{$size * -1} 0 $color,
+    #{$size * -1} #{$size} 0 $color,
+    #{$size} #{$size} 0 $color;
 }

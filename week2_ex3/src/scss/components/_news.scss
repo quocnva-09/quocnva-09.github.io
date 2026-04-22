@@ -1,29 +1,6 @@
 @use "../abstracts" as *;
 
 .news {
-  margin-bottom: 50px;
-
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid $light-orange;
-    margin-bottom: 15px;
-
-    .section-title {
-      border-bottom: none;
-      margin-bottom: 0;
-      flex: 1;
-      &::after {
-        content: "";
-        display: block;
-        width: 25%;
-        height: 2px;
-        background-color: $brand-orange;
-      }
-    }
-  }
-
   &__list {
     list-style: none;
     margin: 0;
@@ -31,16 +8,27 @@
   }
 
   &__item {
+    padding: 12px 10px;
+    border-bottom: 1px dotted #ccc;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__link {
     display: flex;
     align-items: baseline;
-    padding: 12px 10px;
-    border-bottom: 1px dashed #ccc;
-    font-size: 14px;
+    font-size: 13px;
     color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__date {
-    font-weight: bold;
     margin-right: 15px;
     white-space: nowrap;
   }

@@ -3,18 +3,27 @@
 .hero {
   width: 100%;
   position: relative;
-  background: linear-gradient(
-    to bottom,
-    #fff1dd 10%,
-    #fff1dd 0%,
-    #fff 90%,
-    #fff 100%
-  );
-  margin-bottom: 40px;
-  padding-top: 15px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 4px,
+      rgba(255, 255, 255, 0.5) 4px,
+      rgba(255, 255, 255, 0.5) 8px
+    ),
+    linear-gradient(
+      to bottom,
+      $gradient-background-hero 0%,
+      #fff 70%,
+
+      #fff 100%
+    );
 
   &__container {
-    padding: 0; // Remove container padding if we want the image to span fully inside the container width
+    padding: 0;
   }
 
   &__image {

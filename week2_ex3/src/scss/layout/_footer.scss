@@ -5,6 +5,7 @@
 
 .footer {
   font-family: $font-family;
+  border-top: 4px solid $border-color;
 
   &__main {
     display: flex;
