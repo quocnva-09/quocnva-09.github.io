@@ -493,6 +493,7 @@ body {
   font-weight: bold;
   margin: 0;
   padding-right: 15px;
+  letter-spacing: 1px;
 }
 .header__phone {
   display: flex;
@@ -590,169 +591,94 @@ body {
 .footer {
   font-family: "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
-.footer__top {
-  background: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 1.5px, transparent 1.5px, transparent 3px), #fdebd5;
-  padding: 30px 0;
-}
-.footer__container {
+.footer__main {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-}
-.footer__info {
-  font-size: 12px;
-  width: 38%;
-}
-.footer__logo {
-  display: block;
-}
-.footer__logo img {
-  max-width: 100%;
-  height: auto;
-  max-height: auto;
-}
-.footer__address {
-  color: #000;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-.footer__contact {
-  display: flex;
   align-items: center;
-  gap: 12px;
-}
-.footer__booking-tag {
-  background-color: #f0831e;
-  color: #fff;
-  padding: 4px 10px;
-  border-radius: 3px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  line-height: 1;
-}
-.footer__phone {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #f0831e;
-}
-.footer__phone-icon {
-  width: 22px;
-  height: auto;
-}
-.footer__phone-number {
-  font-size: 22px;
-  font-family: "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  line-height: 1;
-  letter-spacing: 1px;
+  padding: 20px 0;
 }
 .footer__nav {
   display: flex;
-  gap: 25px;
-  border: 1px solid #e0c8b0;
-  padding: 20px 5px 20px 30px;
-  background-color: transparent;
-  width: 34%;
-}
-.footer__nav-col {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
   flex-direction: column;
-  gap: 6px;
-  flex: 1;
+  gap: 15px;
+}
+.footer__nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__nav-list:last-child .footer__nav-item:last-child {
+  border-right: none;
+}
+.footer__nav-item {
+  border-left: 1px solid #000;
+  padding: 0 15px;
+  line-height: 1;
+}
+.footer__nav-item:last-child {
+  border-right: 1px solid #000;
 }
 .footer__nav-link {
-  font-size: 14px;
   color: #000;
   text-decoration: none;
-  position: relative;
-  padding-left: 14px;
-  display: block;
+  font-size: 12px;
   white-space: nowrap;
 }
 .footer__nav-link:hover {
   text-decoration: underline;
 }
-.footer__nav-link::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  border-left: 5px solid #000;
-}
-.footer__menu {
-  background: #fff;
-  padding: 20px 30px 20px 30px;
-  width: 22%;
-}
-.footer__menu-title {
-  font-size: 16px;
-  font-weight: normal;
-  color: #000;
-  margin: 0 0 10px 0;
-  display: flex;
-  align-items: center;
-  gap: 0px;
-  white-space: nowrap;
-}
-.footer__menu-title::before {
-  content: "";
-  background-image: url("../../src/assets/images/title-nav-footer.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  height: 14px;
-  width: 14px;
-  margin-right: 5px;
-}
-.footer__menu-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.footer__company {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  align-items: flex-end;
 }
-.footer__menu-link {
-  font-size: 13px;
+.footer__logo-link {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.footer__logo-img {
+  max-width: 296px;
+  height: auto;
+}
+.footer__company-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+.footer__address {
+  font-size: 12px;
   color: #000;
-  text-decoration: none;
-  position: relative;
-  padding-left: 14px;
-  display: block;
+  margin: 0;
+  letter-spacing: 1px;
 }
-.footer__menu-link:hover {
-  text-decoration: underline;
+.footer__phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.footer__menu-link::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  border-left: 5px solid #000;
+.footer__phone-icon {
+  width: 28px;
+  height: auto;
+}
+.footer__phone-number {
+  font-size: 12px;
+  font-family: "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  color: #000;
+  line-height: 1;
+  letter-spacing: 1px;
 }
 .footer__bottom {
-  background-color: #f0831e;
+  background-color: #000;
   text-align: center;
-  padding: 5px 0;
+  padding: 6px 0;
 }
-.footer__copy {
+.footer__copyright {
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
   margin: 0;
+  letter-spacing: 1px;
 }
 
 .button {
