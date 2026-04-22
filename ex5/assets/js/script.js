@@ -12,12 +12,13 @@ function calculateWidth(data, config) {
   return padding * 2 + 10 + barsAreaWidth + gap * 2;
 }
 
-function calculateHeight(data, config, stepHeight) {
+function calculateHeight(data, config) {
+  const { padding, stepHeight, maxValue } = config;
   // Tính maxValue dựa trên giá trị cột lớn nhất trong data để biểu đồ không bị tràn
   const maxColumnValue = Math.max(...data.map((item) => item.value));
   config.maxValue = Math.max(config.maxValue, Math.ceil(maxColumnValue));
   // Chiều cao = padding 2 bên phần trên dưới + chiều cao của khu vực vẽ cột
-  return config.padding * 2 + config.maxValue * stepHeight;
+  return padding * 2 + maxValue * stepHeight;
 }
 
 function drawBarChart() {
@@ -39,7 +40,7 @@ function drawBarChart() {
 
   // Đồng thời gán height và width cho thẻ canvas khi load
   canvas.width = calculateWidth(barChartData, barChartConfig);
-  canvas.height = calculateHeight(barChartData, barChartConfig, stepHeight);
+  canvas.height = calculateHeight(barChartData, barChartConfig);
 
   // Từ đó mới tạo chartHeight và chartWidth
   const chartWidth = canvas.width - padding * 2;

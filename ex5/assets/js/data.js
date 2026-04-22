@@ -7,7 +7,7 @@ const barChartData = [
   { label: "G", value: 6.0 },
   { label: "H", value: 6.0 },
   { label: "I", value: 6.0 },
-  { label: "J", value: 6.0 },
+  { label: "J", value: 15.0 },
   { label: "K", value: 6.0 },
   { label: "L", value: 6.0 },
   { label: "M", value: 6.0 },
@@ -17,13 +17,6 @@ const barChartData = [
   { label: "Q", value: 8.0 },
   { label: "R", value: 6.0 },
   { label: "S", value: 10.0 },
-  { label: "T", value: 6.0 },
-  { label: "U", value: 1.0 },
-  { label: "V", value: 6.0 },
-  { label: "W", value: 6.0 },
-  { label: "X", value: 15.0 },
-  { label: "Y", value: 6.0 },
-  { label: "Z", value: 6.0 },
 ];
 
 const barChartConfig = {
