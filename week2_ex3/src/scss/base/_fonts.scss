@@ -17,15 +17,22 @@
 }
 
 @font-face {
-  font-family: "ShinGoPro-Med";
+  font-family: "ShinGoPro";
   src: url("../../src/assets/fonts/ATTFShinGoProMedium.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "ShinGoPro-DeB";
+  font-family: "ShinGoPro";
   src: url("../../src/assets/fonts/ATTFShinGoProDeBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ShinGoPro";
+  src: url("../../src/assets/fonts/ATTFShinGoProRegular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

@@ -44,6 +44,7 @@
     padding: 5px;
     @include striped-bg(transparent, 2px, 4px);
     font-size: 15px;
+    font-family: $title-article-font-stack;
     font-weight: bold;
     text-align: center;
     box-sizing: border-box;
@@ -69,7 +70,7 @@
   }
 
   &__desc {
-    font-size: 12px;
+    font-size: 13px;
     color: $text-color;
     line-height: 1.6;
     margin: 0;

@@ -11,14 +11,16 @@
   transition: opacity 0.3s ease;
   color: $text-color;
   border: 1px solid $border-color;
+  font-family: $title-font-stack;
 
   &:hover {
-    opacity: 0.8;
+    opacity: 0.7;
+    text-decoration: none;
   }
 
   &__title {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 500;
     @include text-stroke(#fff, 2px);
     margin-bottom: 5px;
   }

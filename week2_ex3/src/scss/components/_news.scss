@@ -10,6 +10,11 @@
   &__item {
     padding: 12px 10px;
     border-bottom: 1px dotted #ccc;
+    font-size: 13px;
+    display: flex;
+    align-items: baseline;
+
+    text-decoration: none;
 
     &:first-child {
       padding-top: 0;
@@ -17,15 +22,7 @@
   }
 
   &__link {
-    display: flex;
-    align-items: baseline;
-    font-size: 13px;
     color: $text-color;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   &__date {
@@ -35,5 +32,9 @@
 
   &__text {
     flex: 1;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

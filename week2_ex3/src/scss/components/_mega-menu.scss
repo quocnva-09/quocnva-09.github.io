@@ -12,6 +12,7 @@
   transition: all 0.3s ease;
   z-index: 100;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: $title-font-stack;
 
   &__list {
     list-style: none;
@@ -29,7 +30,7 @@
   &__link {
     display: flex;
     align-items: center;
-    padding: 5px 5px;
+    padding: 5px 0 5px 5px;
     color: #fff;
     text-decoration: none;
     font-size: 14px;
@@ -37,12 +38,14 @@
 
     &:hover {
       background-color: color.adjust($red-color, $lightness: 10%);
+      text-decoration: none;
+      color: #fff;
     }
   }
 
   &__icon {
     max-width: 20px;
     height: auto;
-    margin-right: 8px;
+    margin-right: 5px;
   }
 }

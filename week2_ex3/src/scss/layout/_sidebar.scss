@@ -23,11 +23,12 @@
   margin-bottom: 20px;
 
   &__title {
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
     margin: 0 0 5px 0;
     color: $text-color;
-    font-family: $shinmgopro-font-stack;
+    font-family: $title-font-stack;
     text-align: center;
     border-bottom: 2px solid $red-color;
     padding: 0 5px 5px;
@@ -36,7 +37,7 @@
   &__list {
     list-style: none;
     margin: 0;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 5px;
     font-family: $ms-gothic-font-stack;
   }
 
@@ -44,6 +45,34 @@
     font-size: 12px;
     margin-bottom: 5px;
     color: $text-color;
+
+    //xử lí hover text
+    position: relative;
+    padding-left: 15px;
+    display: block;
+    width: fit-content;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 5px solid $text-color;
+    }
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -51,9 +80,19 @@
   background-color: $yellow-color;
   margin-bottom: 20px;
   font-family: $font-title-article;
+  font-weight: 500;
 
   &__inner {
     border: 3px solid $red-color;
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &__content {
@@ -63,8 +102,7 @@
   }
 
   &__title {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 15px;
     color: $red-color;
     margin: 0 0 5px 0;
     white-space: nowrap;
@@ -72,8 +110,7 @@
   }
 
   &__subtitle {
-    font-size: 11px;
-    font-weight: bold;
+    font-size: 12px;
     color: $text-color;
     margin: 0;
     @include text-stroke(#fff, 1.5px);
@@ -83,15 +120,14 @@
 .area-widget {
   background-color: $side-bar-info-bg-color; // #fff0b2
   padding: 15px;
+  font-size: 12px;
 
   &__title {
-    font-size: 14px;
     font-weight: bold;
     margin: 0 0 2px 0;
   }
 
   &__desc {
-    font-size: 11px;
     margin: 0 0 10px 0;
     line-height: 1.4;
   }
@@ -99,6 +135,7 @@
   &__item {
     margin-bottom: 5px;
     position: relative;
+    display: block;
 
     img {
       display: block;
@@ -119,8 +156,8 @@
   }
 
   &__footer {
-    font-size: 13px;
     margin: 10px 0 0 0;
     font-weight: bold;
+    letter-spacing: 1.25px;
   }
 }

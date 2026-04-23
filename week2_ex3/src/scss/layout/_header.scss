@@ -2,9 +2,57 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 @use "../abstracts" as *;
+@use "sass:map";
+
+$black-color: #000000;
 
 .header {
   background-color: #fff;
+
+  //hamburger menu for mobile
+  &__hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    z-index: 1001;
+
+    @media (max-width: map.get($breakpoints, "medium")) {
+      display: block;
+      order: 1;
+      margin-top: 10px;
+    }
+
+    &--hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $black-color;
+      left: 0;
+      transition: all 0.3s ease;
+    }
+
+    &::before {
+      top: 5px;
+      box-shadow: 0 6px 0 $black-color;
+    }
+
+    &::after {
+      bottom: 5px;
+    }
+  }
 
   &__top {
     background-color: $red-color;
@@ -23,6 +71,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    flex-wrap: wrap;
   }
 
   &__brand {
@@ -52,12 +101,13 @@
   }
 
   &__contact-desc {
-    font-size: 16px;
+    font-size: 13px;
+    font-family: $title-font-stack;
     color: #666666;
-    font-weight: bold;
     margin: 0;
     padding-right: 15px;
     letter-spacing: 1px;
+    font-weight: 500;
   }
 
   &__phone {
@@ -90,5 +140,47 @@
   &__actions {
     display: flex;
     gap: 10px;
+  }
+}
+
+.menu-overlay {
+  display: none;
+
+  @media (max-width: map.get($breakpoints, "medium")) {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    &.js-overlay--active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.mobile-menu {
+  @media (max-width: map.get($breakpoints, "medium")) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+
+    &.js-nav--active {
+      transform: translateX(0);
+    }
   }
 }
