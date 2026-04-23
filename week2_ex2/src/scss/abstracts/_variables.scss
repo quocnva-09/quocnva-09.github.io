@@ -2,17 +2,6 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-/// Regular font family
-/// @type List
-$text-font-stack:
-  "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
-  sans-serif !default;
-
-/// Code (monospace) font family
-/// @type List
-$code-font-stack:
-  "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco",
-  monospace !default;
 
 /// Century Gothic font family
 /// @type List
@@ -46,13 +35,6 @@ $text-color: #66402b !default;
 /// @type Color
 $brand-color: rgb(229, 0, 80) !default;
 
-/// Light grey
-/// @type Color
-$light-grey: rgb(237, 237, 237) !default;
-
-/// Medium grey
-/// @type Color
-$mid-grey: rgb(153, 153, 153) !default;
 
 /// Dark grey
 $dark-grey: rgb(68, 68, 68) !default;
@@ -60,8 +42,6 @@ $dark-grey: rgb(68, 68, 68) !default;
 /// Brand Orange (Header nav active state, phone number)
 $brand-orange: #f0831e !default;
 
-/// Holiday Red
-$holiday-red: #ea5514 !default;
 
 /// Primary light background (Header top)
 $nav-bg-color: #fbfbfc !default;
@@ -72,8 +52,6 @@ $footer-bg-color: #fdebd5 !default;
 /// Border color (nav separators)
 $border-color: #ccc6c1 !default;
 
-/// Brown color
-$brown-color: #5a3a28 !default;
 
 $light-orange: #fdebd5 !default;
 
@@ -98,4 +76,3 @@ $breakpoints: (
 // /   $base-url: 'https://cdn.example.com/assets/';
 $base-url: "/assets/" !default;
 
-$footer-title-nav-before: url("../../assets/images/title-nav-footer.png");

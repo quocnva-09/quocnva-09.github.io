@@ -23,16 +23,13 @@ function processSlider() {
   if (images.length === 0) return;
 
   let currentIndex = 0;
-  const intervalTime = 4000; // 4 seconds
+  const intervalTime = 4000;
 
   setInterval(() => {
-    // Remove active class from current image
     images[currentIndex].classList.remove("hero__image--active");
 
-    // Move to next image index
     currentIndex = (currentIndex + 1) % images.length;
 
-    // Add active class to new image
     images[currentIndex].classList.add("hero__image--active");
   }, intervalTime);
 }

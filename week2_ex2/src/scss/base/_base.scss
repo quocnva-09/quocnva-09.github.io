@@ -30,7 +30,9 @@ a {
   color: abstracts.$brand-color;
   text-decoration: none;
 
-  @include abstracts.on-event {
+  &:hover,
+  &:active,
+  &:focus {
     color: abstracts.$text-color;
     text-decoration: underline;
   }
