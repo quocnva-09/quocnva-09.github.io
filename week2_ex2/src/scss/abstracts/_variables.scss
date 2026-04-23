@@ -26,11 +26,11 @@ $meiryo-font-stack:
   "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial",
   sans-serif !default;
 
-/// HiraKakuStd-W8 font family
+/// HiraKakuStd-W3 font family
 /// @type List
-$hirakakustd-w8-font-stack:
-  "HiraKakuStd-W8", "Helvetica Neue Light", "Helvetica Neue", "Helvetica",
-  "Arial", sans-serif !default;
+$hirakakustd-w3-font-stack:
+  "Hiragino-Kaku-Gothic-ProN-W3", "Helvetica Neue Light", "Helvetica Neue",
+  "Helvetica", "Arial", sans-serif !default;
 
 /// A-OTF-Ryumin-Pro-L-KL font family
 /// @type List
@@ -64,13 +64,13 @@ $brand-orange: #f0831e !default;
 $holiday-red: #ea5514 !default;
 
 /// Primary light background (Header top)
-$nav-bg-color: #f7f7f7 !default;
+$nav-bg-color: #fbfbfc !default;
 
 /// Footer light background
 $footer-bg-color: #fdebd5 !default;
 
 /// Border color (nav separators)
-$border-color: #ccc !default;
+$border-color: #ccc6c1 !default;
 
 /// Brown color
 $brown-color: #5a3a28 !default;

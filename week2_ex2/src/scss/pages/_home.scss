@@ -37,13 +37,12 @@
 
   &__text {
     flex: 1;
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 13px;
     color: $text-color;
 
     p {
       margin-top: 0;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
 
       &:last-child {
         margin-bottom: 0;
@@ -57,13 +56,13 @@
 
   &__list {
     list-style: none;
-    margin: 0;
+    margin: 0 0 20px 0;
     padding: 0;
 
     li {
       margin-bottom: 5px;
       padding-left: 15px;
-      text-indent: -15px; // Hack for nice bullet alignment
+      text-indent: -15px;
 
       a {
         color: $text-color;

@@ -52,8 +52,10 @@
       <nav class="global-nav">
         <div class="container global-nav__container">
           <ul class="global-nav__list">
-            <li class="global-nav__item global-nav__item--active">
-              <a href="#" class="global-nav__link">HOME</a>
+            <li class="global-nav__item">
+              <a href="#" class="global-nav__link global-nav__link--active"
+                >HOME</a
+              >
             </li>
             <li class="global-nav__item">
               <a href="#" class="global-nav__link">店舗紹介</a>
@@ -129,8 +131,8 @@
                   Feminine（フェミニン）では、フェイシャル・ボディトリートメントを通して「女性らしく」をテーマに皆様の美（ビューティー）をサポートします。
                 </p>
                 <div class="concept__promise">
-                  <p>下記、安心のお約束を致します。</p>
                   <ul class="concept__list">
+                    下記、安心のお約束を致します。
                     <li>
                       <a href="#"
                         ><span class="bullet">・</span>完全個室での施術です</a
@@ -241,38 +243,42 @@
           </div>
 
           <nav class="sidebar-nav">
-            <h3 class="sidebar-nav__title">取り扱いメニュー</h3>
-            <ul class="sidebar-nav__list">
-              <li class="sidebar-nav__item">
-                <a href="#" class="sidebar-nav__link">エステ</a>
-                <ul class="sidebar-nav__sublist">
-                  <li>
-                    <a href="#" class="sidebar-nav__sublink">フェイシャル</a>
-                  </li>
-                  <li>
-                    <a href="#" class="sidebar-nav__sublink">ダイエット</a>
-                  </li>
-                  <li><a href="#" class="sidebar-nav__sublink">脱毛</a></li>
-                  <li>
-                    <a href="#" class="sidebar-nav__sublink"
-                      >美肌再生プログラム</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="sidebar-nav__item sidebar-nav__item--clinic">
-                <a href="#" class="sidebar-nav__link">ヘアクリニック</a>
-                <ul class="sidebar-nav__sublist">
-                  <li>
-                    <a href="#" class="sidebar-nav__sublink"
-                      >アクティについて</a
-                    >
-                  </li>
-                  <li><a href="#" class="sidebar-nav__sublink">発毛</a></li>
-                  <li><a href="#" class="sidebar-nav__sublink">症例</a></li>
-                </ul>
-              </li>
-            </ul>
+            <div class="sidebar-nav__inner">
+              <h3 class="sidebar-nav__title">取り扱いメニュー</h3>
+              <ul class="sidebar-nav__list">
+                <li class="sidebar-nav__item">
+                  <a href="#" class="sidebar-nav__link">エステ</a>
+                  <ul class="sidebar-nav__sublist">
+                    <li>
+                      <a href="#" class="sidebar-nav__sublink">フェイシャル</a>
+                    </li>
+                    <li>
+                      <a href="#" class="sidebar-nav__sublink">ダイエット</a>
+                    </li>
+                    <li>
+                      <a href="#" class="sidebar-nav__sublink">脱毛</a>
+                    </li>
+                    <li>
+                      <a href="#" class="sidebar-nav__sublink"
+                        >美肌再生プログラム</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-nav__item sidebar-nav__item--clinic">
+                  <a href="#" class="sidebar-nav__link">ヘアクリニック</a>
+                  <ul class="sidebar-nav__sublist">
+                    <li>
+                      <a href="#" class="sidebar-nav__sublink"
+                        >アクティについて</a
+                      >
+                    </li>
+                    <li><a href="#" class="sidebar-nav__sublink">発毛</a></li>
+                    <li><a href="#" class="sidebar-nav__sublink">症例</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </nav>
 
           <div class="sidebar__banners">
@@ -286,10 +292,7 @@
 
           <div class="shop-widget">
             <div class="shop-widget__header">
-              <h3 class="shop-widget__title">
-                Feminine
-                <span class="shop-widget__title-sub">（フェミニン）</span>
-              </h3>
+              <h3 class="shop-widget__title">Feminine (フェミニン)</h3>
             </div>
             <div class="shop-widget__body">
               <p class="shop-widget__address">
@@ -354,36 +357,38 @@
             </div>
           </div>
 
-          <nav class="footer__nav">
-            <ul class="footer__nav-col">
-              <li><a href="#" class="footer__nav-link">HOME</a></li>
-              <li><a href="#" class="footer__nav-link">店舗紹介</a></li>
-              <li><a href="#" class="footer__nav-link">よくあるご質問</a></li>
-              <li><a href="#" class="footer__nav-link">お客様の声</a></li>
-              <li><a href="#" class="footer__nav-link">アクセス</a></li>
-              <li><a href="#" class="footer__nav-link">採用情報</a></li>
-            </ul>
-            <ul class="footer__nav-col">
-              <li><a href="#" class="footer__nav-link">キャンペーン</a></li>
-              <li><a href="#" class="footer__nav-link">新着情報</a></li>
-            </ul>
-          </nav>
+          <div class="footer__links">
+            <nav class="footer__nav">
+              <ul class="footer__nav-col">
+                <li><a href="#" class="footer__nav-link">HOME</a></li>
+                <li><a href="#" class="footer__nav-link">店舗紹介</a></li>
+                <li><a href="#" class="footer__nav-link">よくあるご質問</a></li>
+                <li><a href="#" class="footer__nav-link">お客様の声</a></li>
+                <li><a href="#" class="footer__nav-link">アクセス</a></li>
+                <li><a href="#" class="footer__nav-link">採用情報</a></li>
+              </ul>
+              <ul class="footer__nav-col">
+                <li><a href="#" class="footer__nav-link">キャンペーン</a></li>
+                <li><a href="#" class="footer__nav-link">新着情報</a></li>
+              </ul>
+            </nav>
 
-          <div class="footer__menu">
-            <h3 class="footer__menu-title">取り扱いメニュー</h3>
-            <ul class="footer__menu-list">
-              <li><a href="#" class="footer__menu-link">フェイシャル</a></li>
-              <li><a href="#" class="footer__menu-link">ダイエット</a></li>
-              <li><a href="#" class="footer__menu-link">脱毛</a></li>
-              <li>
-                <a href="#" class="footer__menu-link">美肌再生プログラム</a>
-              </li>
-              <li>
-                <a href="#" class="footer__menu-link">アクティについて</a>
-              </li>
-              <li><a href="#" class="footer__menu-link">発毛</a></li>
-              <li><a href="#" class="footer__menu-link">症例</a></li>
-            </ul>
+            <div class="footer__menu">
+              <h3 class="footer__menu-title">取り扱いメニュー</h3>
+              <ul class="footer__menu-list">
+                <li><a href="#" class="footer__menu-link">フェイシャル</a></li>
+                <li><a href="#" class="footer__menu-link">ダイエット</a></li>
+                <li><a href="#" class="footer__menu-link">脱毛</a></li>
+                <li>
+                  <a href="#" class="footer__menu-link">美肌再生プログラム</a>
+                </li>
+                <li>
+                  <a href="#" class="footer__menu-link">アクティについて</a>
+                </li>
+                <li><a href="#" class="footer__menu-link">発毛</a></li>
+                <li><a href="#" class="footer__menu-link">症例</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

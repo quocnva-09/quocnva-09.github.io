@@ -1,12 +1,16 @@
 @use "../abstracts" as *;
 $nav-font-size: 15px;
 $sub-nav-color: #ffc472;
+$border-sublist-color: #d19c5d;
 
 .global-nav {
   background-color: $nav-bg-color;
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
   font-size: $nav-font-size;
+  color: $text-color;
+  white-space: nowrap;
+  font-family: $hirakakustd-w3-font-stack;
 
   &__container {
     padding-left: 0;
@@ -27,7 +31,6 @@ $sub-nav-color: #ffc472;
     text-align: center;
     position: relative;
 
-    // The separator line between items (on the right)
     &::after {
       content: "";
       position: absolute;
@@ -40,7 +43,6 @@ $sub-nav-color: #ffc472;
       z-index: 1;
     }
 
-    // The separator line before the first item (on the left)
     &:first-child::before {
       content: "";
       position: absolute;
@@ -51,14 +53,6 @@ $sub-nav-color: #ffc472;
       height: 50%;
       background-color: $border-color;
       z-index: 1;
-    }
-
-    // For active item, we want a rounded background with spacing and diagonal stripes
-    &--active {
-      .global-nav__link {
-        @include striped-bg($button-color);
-        border-radius: 3px;
-      }
     }
 
     // Hover state to show sub-menu
@@ -72,23 +66,19 @@ $sub-nav-color: #ffc472;
   &__link {
     display: block;
     color: $text-color;
-    margin: 6px; // creates the gap from the borders and separators
-    padding: 10px 0; // compensates to maintain overall height (6+9 = 15)    color: $text-color;
+    margin: 6px;
+    padding: 10px 0;
     text-decoration: none;
     transition:
       background-color 0.3s,
       color 0.3s;
 
-    &:hover {
-      background-color: $nav-bg-color;
-      color: $brand-orange;
+    &:hover,
+    &--active {
+      @include striped-bg($button-color);
+      border-radius: 3px;
       text-decoration: none;
     }
-  }
-
-  // Ensure active state hover doesn't break
-  &__item--active &__link:hover {
-    @include striped-bg($button-color);
   }
 
   // Mega-menu / Sub-list styles
@@ -96,8 +86,8 @@ $sub-nav-color: #ffc472;
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%; // Matches parent width to align side-by-side
-    background-color: $sub-nav-color; // Light orange background as in design
+    width: 100%;
+    background-color: $sub-nav-color;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -112,7 +102,8 @@ $sub-nav-color: #ffc472;
   }
 
   &__sub-item {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5); // Separator between sub items
+    border-bottom: 1px solid $border-sublist-color;
+    font-family: $hirakakustd-w3-font-stack;
 
     &:last-child {
       border-bottom: none;
@@ -121,10 +112,11 @@ $sub-nav-color: #ffc472;
 
   &__sub-link {
     display: block;
-    padding: 10px 5px;
+    padding: 8px 5px;
     margin: 5px;
-    color: $text-color;
     text-decoration: none;
+
+    color: $text-color;
     font-size: 13px;
     text-align: center;
     transition:
@@ -135,6 +127,7 @@ $sub-nav-color: #ffc472;
     &--active {
       @include striped-bg($button-color);
       border-radius: 3px;
+      text-decoration: none;
     }
   }
 }

@@ -8,9 +8,11 @@
   /* Thu nhỏ phần width lại */
   max-width: 230px;
   /* Cân đối với các sidebar banners */
+  font-size: 12px;
 
   &__header {
     padding: 15px;
+    font-family: $hirakakustd-w3-font-stack;
   }
 
   &__title {
@@ -29,7 +31,6 @@
   }
 
   &__address {
-    font-size: 13px;
     line-height: 1.5;
     margin-top: 0;
     margin-bottom: 5px;
@@ -45,11 +46,11 @@
   &__phone-icon {
     width: 24px;
     height: auto;
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   &__phone-number {
-    font-size: 24px;
+    font-size: 25px;
     white-space: nowrap;
     font-family: $century-gothic-font-stack;
   }
