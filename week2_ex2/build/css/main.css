@@ -439,11 +439,61 @@ body {
   background-color: #fff;
   border-top: 4px solid #f0831e;
 }
+@media (max-width: 768px) {
+  .header {
+    background: transparent;
+  }
+}
+.header__hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  z-index: 1001;
+}
+@media (max-width: 768px) {
+  .header__hamburger {
+    display: block;
+    order: 1;
+    margin-top: 10px;
+  }
+}
+.header__hamburger--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.header__hamburger::before, .header__hamburger::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.header__hamburger::before {
+  top: 5px;
+  box-shadow: 0 6px 0 #000;
+}
+.header__hamburger::after {
+  bottom: 5px;
+}
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   padding: 0 0 20px;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  .header__container {
+    flex-direction: column;
+  }
 }
 .header__brand {
   display: flex;
@@ -523,6 +573,47 @@ body {
   font-weight: bold;
 }
 
+.menu-overlay {
+  display: none;
+}
+@media (max-width: 768px) {
+  .menu-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  .menu-overlay.js-overlay--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+  }
+  .mobile-menu.js-nav--active {
+    transform: translateX(0);
+  }
+}
+
 .layout-main {
   display: flex;
   flex-direction: column;
@@ -545,7 +636,6 @@ body {
 }
 @media (min-width: 768px) {
   .layout-main__sidebar {
-    max-width: 230px;
     flex-shrink: 0;
   }
 }
@@ -566,6 +656,14 @@ body {
   height: auto;
 }
 
+.sidebar {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    max-width: 230px;
+  }
+}
 .sidebar__banners {
   display: flex;
   flex-direction: column;
@@ -574,7 +672,7 @@ body {
 }
 .sidebar-banner {
   display: block;
-  max-width: 230px;
+  width: 100%;
 }
 .sidebar-banner img {
   display: block;
@@ -863,6 +961,11 @@ body {
   justify-content: stretch;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .global-nav__list {
+    flex-direction: column;
+  }
+}
 .global-nav__item {
   flex: 1;
   text-align: center;
@@ -889,6 +992,14 @@ body {
   height: 50%;
   background-color: #ccc6c1;
   z-index: 1;
+}
+@media (max-width: 768px) {
+  .global-nav__item {
+    text-align: left;
+  }
+  .global-nav__item::after, .global-nav__item:first-child::before {
+    display: none;
+  }
 }
 .global-nav__item:hover .global-nav__sub-list {
   opacity: 1;
@@ -925,6 +1036,21 @@ body {
   transform: translateY(10px);
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .global-nav__sub-list {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .global-nav__item:hover .global-nav__sub-list {
+    display: block;
+  }
 }
 .global-nav__sub-item {
   border-bottom: 1px solid #d19c5d;
@@ -1019,9 +1145,6 @@ body {
   margin: 0 0 30px 0;
   background-color: #fff;
   width: 100%;
-  /* Thu nhỏ phần width lại */
-  max-width: 230px;
-  /* Cân đối với các sidebar banners */
   font-size: 12px;
 }
 .shop-widget__header {
@@ -1081,7 +1204,7 @@ body {
   margin-bottom: 30px;
   border: 1px solid #e9dfd9;
   border-radius: 2px;
-  max-width: 230px;
+  width: 100%;
   background-color: rgba(255, 248, 241, 0.5);
 }
 .sidebar-nav__inner {

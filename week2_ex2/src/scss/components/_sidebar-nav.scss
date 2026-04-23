@@ -12,7 +12,7 @@ $sidebar-nav-inner-shadow: #fff8f1;
   margin-bottom: 30px;
   border: 1px solid $sidebar-nav-border-color;
   border-radius: 2px;
-  max-width: 230px;
+  width: 100%;
   background-color: rgba($sidebar-nav-inner-shadow, 0.5);
 
   &__inner {

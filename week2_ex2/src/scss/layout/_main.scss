@@ -22,7 +22,6 @@
     width: 100%;
 
     @media (min-width: map.get($breakpoints, "medium")) {
-      max-width: 230px;
       flex-shrink: 0;
     }
   }

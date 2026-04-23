@@ -9,99 +9,105 @@
 
   <body>
     <header class="header">
-      <div class="container header__container">
-        <div class="header__brand">
-          <p class="header__desc">
-            滋賀県草津市のエステ・発毛・育毛の専門家がいるサロンです。
-          </p>
-          <div class="header__logos">
-            <a href="#" class="header__logo-link">
+      <button class="header__hamburger js-hamburger" aria-label="Menu"></button>
+      <div class="menu-overlay js-overlay"></div>
+      <div class="mobile-menu js-nav">
+        <div class="container header__container">
+          <div class="header__brand">
+            <p class="header__desc">
+              滋賀県草津市のエステ・発毛・育毛の専門家がいるサロンです。
+            </p>
+            <div class="header__logos">
+              <a href="#" class="header__logo-link">
+                <img
+                  src="assets/images/logo.png"
+                  alt="Feminine Medical & Beauty Salon"
+                  class="header__logo-img"
+                />
+              </a>
+              <a href="#" class="header__logo-link">
+                <img
+                  src="assets/images/logo-2.png"
+                  alt="Hair Clinic Acti"
+                  class="header__logo-img"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="header__details">
+            <p class="header__address">
+              滋賀県草津市大路1丁目8-1 南洋軒ビル 6F
+            </p>
+            <div class="header__contact">
               <img
-                src="assets/images/logo.png"
-                alt="Feminine Medical & Beauty Salon"
-                class="header__logo-img"
+                src="assets/images/telephone.png"
+                alt="Phone"
+                class="header__phone-icon"
               />
-            </a>
-            <a href="#" class="header__logo-link">
-              <img
-                src="assets/images/logo-2.png"
-                alt="Hair Clinic Acti"
-                class="header__logo-img"
-              />
-            </a>
+              <span class="header__phone-number">077-566-1070</span>
+            </div>
+            <div class="header__meta">
+              <p class="header__hours">営業時間　11:00 ～ 21:00</p>
+              <p class="header__last-order">※入店・予約受付 19:30 まで</p>
+              <p class="header__holiday">定休日　火曜日</p>
+            </div>
           </div>
         </div>
-        <div class="header__details">
-          <p class="header__address">滋賀県草津市大路1丁目8-1 南洋軒ビル 6F</p>
-          <div class="header__contact">
-            <img
-              src="assets/images/telephone.png"
-              alt="Phone"
-              class="header__phone-icon"
-            />
-            <span class="header__phone-number">077-566-1070</span>
-          </div>
-          <div class="header__meta">
-            <p class="header__hours">営業時間　11:00 ～ 21:00</p>
-            <p class="header__last-order">※入店・予約受付 19:30 まで</p>
-            <p class="header__holiday">定休日　火曜日</p>
-          </div>
-        </div>
-      </div>
 
-      <nav class="global-nav">
-        <div class="container global-nav__container">
-          <ul class="global-nav__list">
-            <li class="global-nav__item">
-              <a href="#" class="global-nav__link global-nav__link--active"
-                >HOME</a
-              >
-            </li>
-            <li class="global-nav__item">
-              <a href="#" class="global-nav__link">店舗紹介</a>
-            </li>
-            <li class="global-nav__item global-nav__item--has-sub">
-              <a href="#" class="global-nav__link">エステ</a>
-              <ul class="global-nav__sub-list">
-                <li class="global-nav__sub-item">
-                  <a href="#" class="global-nav__sub-link">フェイシャル</a>
-                </li>
-                <li class="global-nav__sub-item">
-                  <a href="#" class="global-nav__sub-link">ダイエット</a>
-                </li>
-                <li class="global-nav__sub-item">
-                  <a href="#" class="global-nav__sub-link">脱毛</a>
-                </li>
-                <li class="global-nav__sub-item">
-                  <a href="#" class="global-nav__sub-link"
-                    >美肌再生プログラム</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="global-nav__item global-nav__item--has-sub">
-              <a href="#" class="global-nav__link">ヘアクリニック</a>
-              <ul class="global-nav__sub-list">
-                <li class="global-nav__sub-item">
-                  <a href="#" class="global-nav__sub-link">発毛</a>
-                </li>
-                <li class="global-nav__sub-item">
-                  <a href="#" class="global-nav__sub-link">症例</a>
-                </li>
-              </ul>
-            </li>
-            <li class="global-nav__item">
-              <a href="#" class="global-nav__link">よくあるご質問</a>
-            </li>
-            <li class="global-nav__item">
-              <a href="#" class="global-nav__link">お客様の声</a>
-            </li>
-            <li class="global-nav__item">
-              <a href="#" class="global-nav__link">アクセス</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+        <nav class="global-nav">
+          <div class="container global-nav__container">
+            <ul class="global-nav__list">
+              <li class="global-nav__item">
+                <a href="#" class="global-nav__link global-nav__link--active"
+                  >HOME</a
+                >
+              </li>
+              <li class="global-nav__item">
+                <a href="#" class="global-nav__link">店舗紹介</a>
+              </li>
+              <li class="global-nav__item global-nav__item--has-sub">
+                <a href="#" class="global-nav__link">エステ</a>
+                <ul class="global-nav__sub-list">
+                  <li class="global-nav__sub-item">
+                    <a href="#" class="global-nav__sub-link">フェイシャル</a>
+                  </li>
+                  <li class="global-nav__sub-item">
+                    <a href="#" class="global-nav__sub-link">ダイエット</a>
+                  </li>
+                  <li class="global-nav__sub-item">
+                    <a href="#" class="global-nav__sub-link">脱毛</a>
+                  </li>
+                  <li class="global-nav__sub-item">
+                    <a href="#" class="global-nav__sub-link"
+                      >美肌再生プログラム</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="global-nav__item global-nav__item--has-sub">
+                <a href="#" class="global-nav__link">ヘアクリニック</a>
+                <ul class="global-nav__sub-list">
+                  <li class="global-nav__sub-item">
+                    <a href="#" class="global-nav__sub-link">発毛</a>
+                  </li>
+                  <li class="global-nav__sub-item">
+                    <a href="#" class="global-nav__sub-link">症例</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="global-nav__item">
+                <a href="#" class="global-nav__link">よくあるご質問</a>
+              </li>
+              <li class="global-nav__item">
+                <a href="#" class="global-nav__link">お客様の声</a>
+              </li>
+              <li class="global-nav__item">
+                <a href="#" class="global-nav__link">アクセス</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="main">
       <div class="hero">
@@ -401,5 +407,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/header-hamburger.js"></script>
   </body>
 </html>

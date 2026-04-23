@@ -1,6 +1,13 @@
 @use "../abstracts" as *;
+@use "sass:map";
 
 .sidebar {
+  width: 100%;
+
+  @media (min-width: map.get($breakpoints, "medium")) {
+    max-width: 230px;
+  }
+
   &__banners {
     display: flex;
     flex-direction: column;
@@ -10,7 +17,7 @@
 
   &-banner {
     display: block;
-    max-width: 230px;
+    width: 100%;
 
     img {
       display: block;
