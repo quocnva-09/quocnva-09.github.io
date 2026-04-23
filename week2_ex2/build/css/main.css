@@ -441,7 +441,7 @@ body {
 }
 @media (max-width: 768px) {
   .header {
-    background: transparent;
+    background: #fff1dd;
   }
 }
 .header__hamburger {
@@ -649,11 +649,19 @@ body {
 }
 .hero__container {
   padding: 0;
+  display: grid;
 }
 .hero__image {
   display: block;
   width: 100%;
   height: auto;
+  grid-area: 1/1;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+.hero__image--active {
+  opacity: 1;
+  z-index: 1;
 }
 
 .sidebar {

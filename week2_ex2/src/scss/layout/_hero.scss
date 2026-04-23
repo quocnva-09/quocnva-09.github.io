@@ -15,11 +15,20 @@
 
   &__container {
     padding: 0; // Remove container padding if we want the image to span fully inside the container width
+    display: grid;
   }
 
   &__image {
     display: block;
     width: 100%;
     height: auto;
+    grid-area: 1 / 1;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+
+    &--active {
+      opacity: 1;
+      z-index: 1;
+    }
   }
 }

@@ -12,7 +12,7 @@ $black-color: #000;
   border-top: 4px solid $brand-orange;
 
   @media (max-width: map.get($breakpoints, "medium")) {
-    background: transparent;
+    background: #fff1dd;
   }
 
   //hamburger menu for mobile
