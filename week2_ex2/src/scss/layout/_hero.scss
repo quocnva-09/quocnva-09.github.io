@@ -14,7 +14,7 @@
   padding-top: 15px;
 
   &__container {
-    padding: 0; // Remove container padding if we want the image to span fully inside the container width
+    // padding removed to let container padding apply
     display: grid;
   }
 

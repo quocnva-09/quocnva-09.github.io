@@ -14,8 +14,7 @@ $border-sublist-color: #d19c5d;
   font-family: $hirakakustd-w3-font-stack;
 
   &__container {
-    padding-left: 0;
-    padding-right: 0;
+    // padding removed so container mobile gutters apply
   }
 
   &__list {

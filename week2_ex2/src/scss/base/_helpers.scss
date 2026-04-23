@@ -1,4 +1,5 @@
-@use '../abstracts';
+@use "../abstracts";
+@use "sass:map";
 
 // -----------------------------------------------------------------------------
 // This file contains CSS helper classes.
@@ -9,7 +10,7 @@
  */
 .clearfix::after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 
@@ -32,6 +33,11 @@
   /* 3 */
   width: 100%;
   /* 1 */
+
+  @media (max-width: map.get(abstracts.$breakpoints, "medium")) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 /**
