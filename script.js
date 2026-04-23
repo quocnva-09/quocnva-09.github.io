@@ -58,9 +58,9 @@ const exercises = [
     category: "HTML/CSS",
     name: "Tuần 2: Ngày 2 - Bài tập 2",
     links: {
-      "Bài làm": "week2_ex2/",
+      "Bài làm": "week2_ex2/src/",
       "Mã nguồn":
-        "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/week2_ex2",
+        "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/week2_ex2/",
       "Hình tham chiếu":
         "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/week2_ex2/de_w2d2.jpg?raw=true",
     },
@@ -69,9 +69,9 @@ const exercises = [
     category: "HTML/CSS",
     name: "Tuần 2: Ngày 3 - Bài tập 3",
     links: {
-      "Bài làm": "week2_ex3/",
+      "Bài làm": "week2_ex3/src/",
       "Mã nguồn":
-        "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/week2_ex3",
+        "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/week2_ex3/",
       "Hình tham chiếu":
         "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/week2_ex3/de_w2d3.jpg?raw=true",
     },
