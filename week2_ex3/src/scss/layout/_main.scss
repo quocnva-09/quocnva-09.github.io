@@ -6,7 +6,6 @@
   flex-direction: column;
   gap: 30px;
   margin-bottom: 80px;
-  padding: 0;
 
   @media (min-width: map.get($breakpoints, "medium")) {
     flex-direction: row;

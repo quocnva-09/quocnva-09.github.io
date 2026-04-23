@@ -1,5 +1,6 @@
 @use "../abstracts" as *;
 @use "sass:color";
+@use "sass:map";
 
 .mega-menu {
   position: absolute;
@@ -47,5 +48,14 @@
     max-width: 20px;
     height: auto;
     margin-right: 5px;
+  }
+
+  @media (max-width: map.get($breakpoints, "medium")) {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    display: none;
   }
 }

@@ -34,7 +34,23 @@ function processSlider() {
   }, intervalTime);
 }
 
+function processMegaMenu() {
+  const dropdownLinks = document.querySelectorAll('.global-nav__item--has-dropdown > .global-nav__link');
+
+  dropdownLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      // Toggle logic only for mobile viewports
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const parentItem = link.parentElement;
+        parentItem.classList.toggle('is-open');
+      }
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   processHeader();
   processSlider();
+  processMegaMenu();
 });

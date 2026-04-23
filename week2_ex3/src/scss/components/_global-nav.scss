@@ -9,12 +9,6 @@
   border-bottom: 1px solid #ccc;
   position: relative;
   z-index: 10;
-
-  &__container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   &__list {
     list-style: none;
     margin: 0;
@@ -58,6 +52,14 @@
           transform: translateY(0);
         }
       }
+
+      &.is-open {
+        .mega-menu {
+          @media (max-width: map.get($breakpoints, "medium")) {
+            display: block;
+          }
+        }
+      }
     }
   }
 
@@ -67,7 +69,7 @@
     padding: 17px 0;
     text-decoration: none;
     font-size: 16px;
-    font-family: $font-title, sans-serif;
+    font-family: $title-font-stack;
     transition:
       background-color 0.3s,
       color 0.3s;
