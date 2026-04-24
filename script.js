@@ -36,11 +36,14 @@ const exercises = [
     category: "HTML/CSS",
     name: "Tuần 1: Ngày 3/4 - Bài tập 4",
     links: {
-      "Bài làm": "ex4/src/product-page.html",
+      "Home Page": "ex4/src/index.html",
+      "Product Page": "ex4/src/product-page.html",
+      "Cart Page": "ex4/src/cart-page.html",
+      "Category Page": "ex4/src/category-page.html",
       "Mã nguồn":
         "https://github.com/quocnva-09/quocnva-09.github.io/tree/main/ex4",
-      "Hình tham chiếu":
-        "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/ex4/de_4.jpg?raw=true",
+      "Figma link":
+        "https://www.figma.com/design/J9XQXnUPUd9UOvIjeRUIcM/E-commerce-Website-Template--Freebie---Community-?node-id=1-2",
     },
   },
   {
