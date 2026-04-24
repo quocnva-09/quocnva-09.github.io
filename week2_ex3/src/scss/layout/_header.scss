@@ -24,7 +24,7 @@ $black-color: #000000;
     @media (max-width: map.get($breakpoints, "medium")) {
       display: block;
       order: 1;
-      margin-top: 10px;
+      margin: 10px;
     }
 
     &--hidden {

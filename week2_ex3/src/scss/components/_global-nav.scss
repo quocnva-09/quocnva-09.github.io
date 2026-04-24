@@ -9,6 +9,13 @@
   border-bottom: 1px solid #ccc;
   position: relative;
   z-index: 10;
+
+  @media (max-width: map.get($breakpoints, "medium")) {
+    border: none;
+    box-shadow: none;
+    background: #fff;
+  }
+
   &__list {
     list-style: none;
     margin: 0;
@@ -30,6 +37,10 @@
     position: relative;
     border-right: 1px solid #ccc;
     font-weight: bold;
+
+    @media (max-width: map.get($breakpoints, "medium")) {
+      border: 1px solid #ccc;
+    }
 
     &:first-child {
       border-left: 1px solid #ccc;

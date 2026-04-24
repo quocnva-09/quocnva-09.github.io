@@ -330,11 +330,10 @@ html {
  * Basic styles for links
  */
 a {
-  color: rgb(229, 0, 80);
+  color: #000;
   text-decoration: none;
 }
 a:hover, a:active, a:focus, a:focus-within {
-  color: #000;
   text-decoration: underline;
 }
 
@@ -482,7 +481,7 @@ body {
   .header__hamburger {
     display: block;
     order: 1;
-    margin-top: 10px;
+    margin: 10px;
   }
 }
 .header__hamburger--hidden {
@@ -776,11 +775,13 @@ body {
 .area-widget__item {
   margin-bottom: 5px;
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 .area-widget__item img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  width: auto;
   height: auto;
 }
 .area-widget__overlay-text {
@@ -987,6 +988,13 @@ body {
   position: relative;
   z-index: 10;
 }
+@media (max-width: 768px) {
+  .global-nav {
+    border: none;
+    box-shadow: none;
+    background: #fff;
+  }
+}
 .global-nav__list {
   list-style: none;
   margin: 0;
@@ -1008,6 +1016,11 @@ body {
   position: relative;
   border-right: 1px solid #ccc;
   font-weight: bold;
+}
+@media (max-width: 768px) {
+  .global-nav__item {
+    border: 1px solid #ccc;
+  }
 }
 .global-nav__item:first-child {
   border-left: 1px solid #ccc;
@@ -1059,14 +1072,15 @@ body {
 }
 
 .service-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   margin-bottom: 10px;
 }
-.service-grid .card-service {
-  flex: 1 1 calc(33.333% - 15px);
-  min-width: 0;
+@media (min-width: 768px) {
+  .service-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .service__action {
@@ -1201,9 +1215,11 @@ body {
 }
 .shop-widget__image {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  width: auto;
   height: auto;
   margin-bottom: 10px;
+  margin: 0 auto;
 }
 .shop-widget__action {
   text-align: center;

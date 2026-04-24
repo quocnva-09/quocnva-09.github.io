@@ -1,14 +1,14 @@
 @use "../abstracts" as *;
+@use "sass:map";
 
 .service-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   margin-bottom: 10px;
 
-  .card-service {
-    flex: 1 1 calc(33.333% - 15px);
-    min-width: 0; // allow shrinking
+  @media (min-width: map.get($breakpoints, "medium")) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

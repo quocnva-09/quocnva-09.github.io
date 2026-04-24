@@ -1,4 +1,5 @@
 @use "../abstracts" as *;
+@use "sass:map";
 
 .sidebar {
   &__banner {
@@ -135,11 +136,13 @@
   &__item {
     margin-bottom: 5px;
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: center;
 
     img {
       display: block;
-      width: 100%;
+      max-width: 100%;
+      width: auto;
       height: auto;
     }
   }
