@@ -46,7 +46,6 @@
     rgba(255, 255, 255, 0.5) $pos-x,
     rgba(255, 255, 255, 0.5) $pos-y
   );
-  color: #fff;
 }
 
 @mixin text-stroke($color: #fff, $size: 1px) {

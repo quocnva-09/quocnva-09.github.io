@@ -5,7 +5,6 @@
   &__banner {
     display: block;
     margin-bottom: 20px;
-    text-decoration: none;
 
     img {
       display: block;
@@ -28,7 +27,6 @@
     font-weight: 500;
     letter-spacing: 1.5px;
     margin: 0 0 5px 0;
-    color: $text-color;
     font-family: $title-font-stack;
     text-align: center;
     border-bottom: 2px solid $red-color;
@@ -36,8 +34,6 @@
   }
 
   &__list {
-    list-style: none;
-    margin: 0;
     padding: 0 0 0 5px;
     font-family: $ms-gothic-font-stack;
   }
@@ -45,7 +41,6 @@
   &__item {
     font-size: 12px;
     margin-bottom: 5px;
-    color: $text-color;
 
     //xử lí hover text
     position: relative;
@@ -66,11 +61,6 @@
       border-left: 5px solid $text-color;
     }
 
-    a {
-      text-decoration: none;
-      color: $text-color;
-    }
-
     &:hover {
       text-decoration: underline;
     }
@@ -85,11 +75,6 @@
 
   &__inner {
     border: 3px solid $red-color;
-
-    a {
-      text-decoration: none;
-      color: $text-color;
-    }
 
     &:hover {
       opacity: 0.7;

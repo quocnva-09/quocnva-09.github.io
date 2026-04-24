@@ -16,24 +16,17 @@
   font-family: $title-font-stack;
 
   &__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
     &:first-child {
       padding-top: 12px;
     }
   }
 
-  &__item {
-  }
 
   &__link {
     display: flex;
     align-items: center;
     padding: 5px 0 5px 5px;
     color: #fff;
-    text-decoration: none;
     font-size: 14px;
     transition: background-color 0.2s ease;
 

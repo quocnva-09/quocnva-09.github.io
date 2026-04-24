@@ -49,7 +49,6 @@
     text-align: center;
     box-sizing: border-box;
     line-height: 1.4;
-    color: $text-color;
 
     //căn giữa
     display: flex;
@@ -71,7 +70,6 @@
 
   &__desc {
     font-size: 13px;
-    color: $text-color;
     line-height: 1.6;
     margin: 0;
   }
