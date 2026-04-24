@@ -33,12 +33,17 @@
     width: 100%;
     height: auto;
     background-color: #eee; // Box placeholder color if img missing
+
+    @media (max-width: map.get($breakpoints, "medium")) {
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__text {
     flex: 1;
     font-size: 13px;
-    color: $text-color;
 
     p {
       margin-top: 0;
@@ -63,9 +68,10 @@
       margin-bottom: 5px;
       padding-left: 15px;
       text-indent: -15px;
+      font-weight: bold;
 
       a {
-        color: $text-color;
+        // color inherited from _base.scss a tag
       }
     }
   }
@@ -79,7 +85,7 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 
     @media (min-width: map.get($breakpoints, "medium")) {

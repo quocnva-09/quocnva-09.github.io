@@ -331,11 +331,10 @@ html {
  * Basic styles for links
  */
 a {
-  color: rgb(229, 0, 80);
+  color: #66402b;
   text-decoration: none;
 }
 a:hover, a:active, a:focus {
-  color: #66402b;
   text-decoration: underline;
 }
 
@@ -466,6 +465,7 @@ body {
     display: block;
     order: 1;
     margin-top: 10px;
+    margin-left: 10px;
   }
 }
 .header__hamburger--hidden {
@@ -509,7 +509,6 @@ body {
 .header__desc {
   justify-self: flex-start;
   font-size: 12px;
-  color: #66402b;
   padding-top: 10px;
   margin: 0;
 }
@@ -518,6 +517,13 @@ body {
   align-items: center;
   gap: 20px;
   padding-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .header__logos {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0 0 0;
+  }
 }
 .header__logo-link {
   display: block;
@@ -534,10 +540,16 @@ body {
   text-align: right;
   padding-top: 40px;
 }
+@media (max-width: 768px) {
+  .header__details {
+    padding-top: 0;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
 .header__address {
   font-size: 12px;
   margin: 0 0 5px;
-  color: rgb(68, 68, 68);
 }
 .header__contact {
   display: flex;
@@ -563,9 +575,13 @@ body {
   font-size: 12px;
   color: rgb(68, 68, 68);
 }
+@media (max-width: 768px) {
+  .header__meta {
+    align-items: flex-start;
+  }
+}
 .header__hours {
   margin: 0;
-  text-align: right;
   line-height: 1.4;
 }
 .header__last-order {
@@ -681,10 +697,10 @@ body {
   flex-direction: column;
   gap: 15px;
   margin-bottom: 30px;
+  align-items: center;
 }
 .sidebar-banner {
-  display: block;
-  width: 100%;
+  max-width: 230px;
 }
 .sidebar-banner img {
   display: block;
@@ -699,9 +715,6 @@ body {
   margin-bottom: 30px;
 }
 
-.footer {
-  font-family: "Meiryo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
 .footer__top {
   background: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 1.5px, transparent 1.5px, transparent 3px), #fdebd5;
   padding: 30px 0;
@@ -746,7 +759,6 @@ body {
   max-height: auto;
 }
 .footer__address {
-  color: #66402b;
   line-height: 1.8;
   margin-bottom: 20px;
 }
@@ -820,7 +832,6 @@ body {
 }
 .footer__nav-link {
   font-size: 14px;
-  color: #66402b;
   text-decoration: none;
   position: relative;
   padding-left: 14px;
@@ -857,7 +868,6 @@ body {
   font-size: 16px;
   font-weight: normal;
   font-family: "Hiragino-Kaku-Gothic-ProN-W3", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  color: #66402b;
   margin: 0 0 10px 0;
   display: flex;
   align-items: center;
@@ -881,7 +891,6 @@ body {
 }
 .footer__menu-link {
   font-size: 13px;
-  color: #66402b;
   text-decoration: none;
   position: relative;
   padding-left: 14px;
@@ -957,7 +966,6 @@ body {
   border-top: 1px solid #ccc6c1;
   border-bottom: 1px solid #ccc6c1;
   font-size: 15px;
-  color: #66402b;
   white-space: nowrap;
   font-family: "Hiragino-Kaku-Gothic-ProN-W3", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
@@ -1016,7 +1024,6 @@ body {
 }
 .global-nav__link {
   display: block;
-  color: #66402b;
   margin: 6px;
   padding: 10px 0;
   text-decoration: none;
@@ -1072,7 +1079,6 @@ body {
   padding: 8px 5px;
   margin: 5px;
   text-decoration: none;
-  color: #66402b;
   font-size: 13px;
   text-align: center;
   transition: background-color 0.2s, color 0.2s;
@@ -1088,7 +1094,6 @@ body {
 .section-title {
   font-size: 19px;
   font-weight: normal;
-  color: #66402b;
   margin: 0;
   padding: 8px 0 0;
   position: relative;
@@ -1141,7 +1146,6 @@ body {
 }
 .card-service__desc {
   font-size: 13px;
-  color: #66402b;
   line-height: 1.6;
   margin-top: 0;
   margin-bottom: 20px;
@@ -1162,7 +1166,6 @@ body {
 .shop-widget__title {
   margin: 0;
   font-size: 18px;
-  color: #66402b;
   font-weight: normal;
 }
 .shop-widget__title-sub {
@@ -1267,7 +1270,6 @@ body {
 .sidebar-nav__link {
   order: 1;
   padding: 12px 0 0 20px;
-  color: #66402b;
   text-decoration: none;
   font-size: 14px;
   position: relative;
@@ -1298,7 +1300,6 @@ body {
 }
 .sidebar-nav__sublink {
   font-size: 12px;
-  color: #66402b;
   text-decoration: none;
   position: relative;
   padding-left: 35px;
@@ -1355,10 +1356,6 @@ body {
   padding: 12px 10px;
   border-bottom: 1px dashed #ccc;
   font-size: 14px;
-  color: #66402b;
-}
-.news__item a {
-  color: #66402b;
 }
 .news__date {
   margin-right: 15px;
@@ -1398,10 +1395,16 @@ body {
   height: auto;
   background-color: #eee;
 }
+@media (max-width: 768px) {
+  .concept__image {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .concept__text {
   flex: 1;
   font-size: 13px;
-  color: #66402b;
 }
 .concept__text p {
   margin-top: 0;
@@ -1422,17 +1425,14 @@ body {
   margin-bottom: 5px;
   padding-left: 15px;
   text-indent: -15px;
+  font-weight: bold;
 }
-.concept__list li a {
-  color: #66402b;
-}
-
 .menu-showcase {
   margin-bottom: 50px;
 }
 .menu-showcase__grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 @media (min-width: 768px) {

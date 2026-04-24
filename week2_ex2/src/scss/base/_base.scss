@@ -27,13 +27,12 @@ html {
  * Basic styles for links
  */
 a {
-  color: abstracts.$brand-color;
+  color: abstracts.$text-color;
   text-decoration: none;
 
   &:hover,
   &:active,
   &:focus {
-    color: abstracts.$text-color;
     text-decoration: underline;
   }
 }

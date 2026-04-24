@@ -9,7 +9,6 @@ $border-sublist-color: #d19c5d;
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
   font-size: $nav-font-size;
-  color: $text-color;
   white-space: nowrap;
   font-family: $hirakakustd-w3-font-stack;
 
@@ -78,7 +77,6 @@ $border-sublist-color: #d19c5d;
 
   &__link {
     display: block;
-    color: $text-color;
     margin: 6px;
     padding: 10px 0;
     text-decoration: none;
@@ -144,7 +142,6 @@ $border-sublist-color: #d19c5d;
     margin: 5px;
     text-decoration: none;
 
-    color: $text-color;
     font-size: 13px;
     text-align: center;
     transition:

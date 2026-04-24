@@ -13,11 +13,11 @@
     flex-direction: column;
     gap: 15px;
     margin-bottom: 30px;
+    align-items: center;
   }
 
   &-banner {
-    display: block;
-    width: 100%;
+    max-width: 230px;
 
     img {
       display: block;

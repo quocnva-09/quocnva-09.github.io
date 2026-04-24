@@ -31,6 +31,7 @@ $black-color: #000;
       display: block;
       order: 1;
       margin-top: 10px;
+      margin-left: 10px;
     }
 
     &--hidden {
@@ -81,7 +82,6 @@ $black-color: #000;
   &__desc {
     justify-self: flex-start;
     font-size: $font-size-header-detail;
-    color: $text-color;
     padding-top: 10px;
     margin: 0;
   }
@@ -91,6 +91,12 @@ $black-color: #000;
     align-items: center;
     gap: 20px;
     padding-bottom: 15px;
+
+    @media (max-width: map.get($breakpoints, "medium")) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 10px 0 0 0;
+    }
   }
 
   &__logo-link {
@@ -109,12 +115,17 @@ $black-color: #000;
     align-items: flex-end;
     text-align: right;
     padding-top: 40px;
+
+    @media (max-width: map.get($breakpoints, "medium")) {
+      padding-top: 0;
+      align-items: flex-start;
+      text-align: left;
+    }
   }
 
   &__address {
     font-size: $font-size-header-detail;
     margin: 0 0 5px;
-    color: $dark-grey;
   }
 
   &__contact {
@@ -143,11 +154,14 @@ $black-color: #000;
     gap: 5px;
     font-size: $font-size-header-detail;
     color: $dark-grey;
+
+    @media (max-width: map.get($breakpoints, "medium")) {
+      align-items: flex-start;
+    }
   }
 
   &__hours {
     margin: 0;
-    text-align: right;
     line-height: 1.4;
   }
 

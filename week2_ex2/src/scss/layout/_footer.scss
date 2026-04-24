@@ -9,8 +9,6 @@ $font-size-nav: 14px;
 $font-size-menu: 13px;
 
 .footer {
-  font-family: $meiryo-font-stack;
-
   &__top {
     // Kẻ sọc xiên chéo nền giống logic global-nav__link
     background:
@@ -66,7 +64,6 @@ $font-size-menu: 13px;
   }
 
   &__address {
-    color: $text-color;
     line-height: 1.8;
     margin-bottom: 20px;
   }
@@ -147,7 +144,6 @@ $font-size-menu: 13px;
 
   &__nav-link {
     font-size: $font-size-nav;
-    color: $text-color;
     text-decoration: none;
     position: relative;
     padding-left: 14px;
@@ -187,7 +183,6 @@ $font-size-menu: 13px;
     font-size: 16px;
     font-weight: normal;
     font-family: $hirakakustd-w3-font-stack;
-    color: $text-color;
     margin: 0 0 10px 0;
     display: flex;
     align-items: center;
@@ -214,7 +209,6 @@ $font-size-menu: 13px;
 
   &__menu-link {
     font-size: $font-size-menu;
-    color: $text-color;
     text-decoration: none;
     position: relative;
     padding-left: 14px;
