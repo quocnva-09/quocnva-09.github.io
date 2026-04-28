@@ -79,6 +79,14 @@ const exercises = [
         "https://github.com/quocnva-09/quocnva-09.github.io/blob/main/week2_ex3/de_w2d3.jpg?raw=true",
     },
   },
+  {
+    category: "PHP",
+    name: "Tuần 1: Ngày 1",
+    links: {
+      "MVC docs":
+        "https://docs.google.com/document/d/1SdVFAlmsHEWkLDJidv54ju1z9kRiSZXX/edit?usp=drive_link&ouid=113926005398439037681&rtpof=true&sd=true",
+    },
+  },
 ];
 
 const container = document.getElementById("exercise-list");
