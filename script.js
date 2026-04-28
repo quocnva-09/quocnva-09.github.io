@@ -85,6 +85,10 @@ const exercises = [
     links: {
       "MVC docs":
         "https://docs.google.com/document/d/1SdVFAlmsHEWkLDJidv54ju1z9kRiSZXX/edit?usp=drive_link&ouid=113926005398439037681&rtpof=true&sd=true",
+      "Demo MVC":
+        "https://github.com/quocnva-09/training_php/tree/main/week1_day1/demo_mvc",
+      "PHP OOP":
+        "https://github.com/quocnva-09/training_php/tree/main/week1_day1/php_oop",
     },
   },
 ];
