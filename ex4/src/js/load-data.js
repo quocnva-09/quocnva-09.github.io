@@ -67,37 +67,15 @@ async function loadProducts() {
   productsData = await fetch("./assets/data/products.json").then((response) =>
     response.json(),
   );
-  showProducts();
+  showCategoryProducts();
+  showProductCollection("js-new-arrivals", 4);
+  showProductCollection("js-top-selling", 4);
+  showProductCollection("js-related-products", 8);
 }
 
-function showProducts() {
-  const productContainer =
-    document.getElementById("js-related-products") ||
-    document.getElementById("js-category-products");
-
-  if (!productContainer) return;
-
-  if (!productsData || productsData.length === 0) {
-    productContainer.innerHTML =
-      '<p class="product-empty-message" style="width: 100%; text-align: center;">No product to show!</p>';
-    return;
-  }
-
-  let paginatedProducts = productsData;
-  const isCategoryPage = productContainer.id === "js-category-products";
-  const itemsPerPage = getItemsPerPage();
-
-  if (isCategoryPage) {
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    paginatedProducts = productsData.slice(startIndex, endIndex);
-  } else {
-    // For related products, show only first 4
-    paginatedProducts = productsData.slice(0, 4);
-  }
-
+function generateProductCardsHTML(products) {
   let htmlContent = "";
-  paginatedProducts.forEach((product) => {
+  products.forEach((product) => {
     let validImage = product.image[0];
     if (!validImage || !/\.(jpg|jpeg|png)$/i.test(validImage)) {
       validImage = "assets/images/default.png";
@@ -145,11 +123,40 @@ function showProducts() {
 			</div>
 			`;
   });
-  productContainer.innerHTML = htmlContent;
+  return htmlContent;
+}
 
-  if (isCategoryPage) {
-    renderPagination();
+function showCategoryProducts() {
+  const productContainer = document.getElementById("js-category-products");
+  if (!productContainer) return;
+
+  if (!productsData || productsData.length === 0) {
+    productContainer.innerHTML =
+      '<p class="product-empty-message" style="width: 100%; text-align: center;">No product to show!</p>';
+    return;
   }
+
+  const itemsPerPage = getItemsPerPage();
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedProducts = productsData.slice(startIndex, endIndex);
+
+  productContainer.innerHTML = generateProductCardsHTML(paginatedProducts);
+  renderPagination();
+}
+
+function showProductCollection(selector, limit = 8) {
+  const productContainer = document.getElementById(selector);
+  if (!productContainer) return;
+
+  if (!productsData || productsData.length === 0) {
+    productContainer.innerHTML =
+      '<p class="product-empty-message" style="width: 100%; text-align: center;">No product to show!</p>';
+    return;
+  }
+
+  const products = productsData.slice(0, limit);
+  productContainer.innerHTML = generateProductCardsHTML(products);
 }
 
 function renderPagination() {
@@ -223,7 +230,7 @@ window.changePage = function (page) {
   if (page < 1 || page > totalPages) return;
 
   currentPage = page;
-  showProducts();
+  showCategoryProducts();
 
   // Scroll to top of product grid
   const productContainer = document.getElementById("js-category-products");
@@ -245,11 +252,77 @@ window.addEventListener("resize", () => {
     } else if (currentPage === 0 && totalPages > 0) {
       currentPage = 1;
     }
-    showProducts();
+    showCategoryProducts();
   }
 });
+
+async function loadFeedbackSlider() {
+  const feedbackContainer = document.querySelector(".js-feedback-items");
+  if (!feedbackContainer) return;
+
+  let reviews = [];
+  try {
+    reviews = await fetch("./assets/data/reviews.json").then((response) =>
+      response.json(),
+    );
+  } catch (error) {
+    console.error("Error loading reviews for feedback slider:", error);
+    return;
+  }
+
+  // Lấy 8 thẻ đầu
+  const topReviews = reviews.slice(0, 8);
+
+  feedbackContainer.innerHTML = "";
+  topReviews.forEach((review) => {
+    feedbackContainer.innerHTML += `
+        <div class="review-card">
+          <div class="review-card__header">
+            <div class="rating-row">
+                <div class="rating">${renderRating(review.rating)}</div>
+            </div>
+            <button class="review-card__menu"></button>
+          </div>
+          <div class="review-card__name-wrapper">
+            <div class="review-card__name">
+              <span>${review.name}</span>
+              <span class="verified-icon"></span>
+            </div>
+            <div class="tooltip tooltip--review-card">
+              <span>${review.name}</span>
+              <span class="verified-icon"></span>
+            </div>
+          </div>
+          <div class="review-card__comment-wrapper">
+            <p class="review-card__comment">${review.comment}</p>
+            <div class="tooltip tooltip--comment">${review.comment}</div>
+          </div>
+          <time class="review-card__date">Posted ${review.date}</time>
+        </div>
+        `;
+  });
+
+  // Setup slider scroll event
+  const prevBtn = document.querySelector(".js-feedback-prev");
+  const nextBtn = document.querySelector(".js-feedback-next");
+  
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener("click", () => {
+      const itemWidth = feedbackContainer.querySelector(".review-card")?.offsetWidth || 400;
+      const gap = parseInt(window.getComputedStyle(feedbackContainer).gap) || 20;
+      feedbackContainer.scrollBy({ left: -(itemWidth + gap), behavior: "smooth" });
+    });
+    
+    nextBtn.addEventListener("click", () => {
+      const itemWidth = feedbackContainer.querySelector(".review-card")?.offsetWidth || 400;
+      const gap = parseInt(window.getComputedStyle(feedbackContainer).gap) || 20;
+      feedbackContainer.scrollBy({ left: (itemWidth + gap), behavior: "smooth" });
+    });
+  }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   showReviews();
   loadProducts();
+  loadFeedbackSlider();
 });

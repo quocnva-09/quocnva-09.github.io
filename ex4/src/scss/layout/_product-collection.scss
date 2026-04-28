@@ -1,8 +1,14 @@
 @use "../abstracts" as *;
 
-.related-products {
+.product-collection {
   position: relative;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+  margin-bottom: 64px;
 
   &__title {
     text-align: center;
@@ -10,7 +16,8 @@
     font-size: 48px;
     font-weight: 700;
     color: $black-color;
-    margin: 64px 0 55px 0;
+    margin-top: 0;
+    margin-bottom: 55px;
 
     @media (max-width: $breakpoint) {
       font-size: 32px;
@@ -20,13 +27,13 @@
 
   &__list {
     @include flex-group(20px, flex-start, stretch);
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 100%;
     transition: transform 0.5s ease;
 
     @media (max-width: $breakpoint) {
       gap: 16px;
-      margin-left: 16px;
+      margin-left: 0;
     }
 
     .product-card {
@@ -52,6 +59,14 @@
   &__slider {
     overflow: hidden;
     width: 100%;
+
+    .product-collection__list {
+      flex-wrap: nowrap;
+
+      @media (max-width: $breakpoint) {
+        margin-left: 16px;
+      }
+    }
 
     @media (max-width: $breakpoint) {
       overflow-x: auto;
