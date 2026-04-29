@@ -91,6 +91,14 @@ const exercises = [
         "https://github.com/quocnva-09/training_php/tree/main/week1_day1/php_oop",
     },
   },
+  {
+    category: "PHP",
+    name: "Tuần 1: Ngày 2",
+    links: {
+      "Bài tập MVC + Tập config routing":
+        "https://github.com/quocnva-09/training_php/tree/main/week1_day2",
+    },
+  },
 ];
 
 const container = document.getElementById("exercise-list");
