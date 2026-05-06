@@ -99,6 +99,14 @@ const exercises = [
         "https://github.com/quocnva-09/training_php/tree/main/week1_day2",
     },
   },
+  {
+    category: "PHP",
+    name: "SHOPCO - Laravel RESTfulAPI",
+    links: {
+      Soucecode:
+        "https://github.com/quocnva-09/training_php/tree/main/week1_day3/shopco-laravel",
+    },
+  },
 ];
 
 const container = document.getElementById("exercise-list");
