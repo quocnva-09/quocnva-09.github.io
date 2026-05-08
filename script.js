@@ -107,6 +107,14 @@ const exercises = [
         "https://github.com/quocnva-09/training_php/tree/main/week1_day3/shopco-laravel",
     },
   },
+  {
+    category: "PHP",
+    name: "Tóm tắt kiến thức tìm hiểu",
+    links: {
+      "Laravel Document":
+        "https://docs.google.com/document/d/1P72YSLJ-CMSeQs1R7_IM_BTNg5WlPV2j/edit",
+    },
+  },
 ];
 
 const container = document.getElementById("exercise-list");
