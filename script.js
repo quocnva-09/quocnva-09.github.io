@@ -103,8 +103,7 @@ const exercises = [
     category: "PHP",
     name: "SHOPCO - Laravel RESTfulAPI",
     links: {
-      Soucecode:
-        "https://github.com/quocnva-09/training_php/tree/main/week1_day3/shopco-laravel",
+      Soucecode: "https://github.com/quocnva-09/shopco-laravel",
     },
   },
   {
@@ -113,6 +112,25 @@ const exercises = [
     links: {
       "Laravel Document":
         "https://docs.google.com/document/d/1P72YSLJ-CMSeQs1R7_IM_BTNg5WlPV2j/edit",
+    },
+  },
+  {
+    category: "PHP",
+    name: "Tìm hiểu Security & Performance",
+    links: {
+      "Security & Performance Study":
+        "https://docs.google.com/document/d/1Apf4zPJWV4axUViI1ii1j2fFv7CWM4_W/edit",
+    },
+  },
+  {
+    category: "PHP",
+    name: "Danh sách URL",
+    links: {
+      "Deploy Production (AWS EC2)": "https://api.quocnva09.me/",
+      "Dockerhub Image": "https://hub.docker.com/r/anhquoc09/shopco-laravel",
+      "Postman Collection":
+        "https://documenter.getpostman.com/view/38748390/2sBXqNnya5",
+      "Swagger UI": "https://api.quocnva09.me/api/documentation",
     },
   },
 ];
