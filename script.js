@@ -101,13 +101,6 @@ const exercises = [
   },
   {
     category: "PHP",
-    name: "SHOPCO - Laravel RESTfulAPI",
-    links: {
-      Soucecode: "https://github.com/quocnva-09/shopco-laravel",
-    },
-  },
-  {
-    category: "PHP",
     name: "Tóm tắt kiến thức tìm hiểu",
     links: {
       "Laravel Document":
@@ -131,6 +124,28 @@ const exercises = [
       "Postman Collection":
         "https://documenter.getpostman.com/view/38748390/2sBXqNnya5",
       "Swagger UI": "https://api.quocnva09.me/api/documentation",
+    },
+  },
+  {
+    category: "Mini Project",
+    name: "Thiết kế giao diện",
+    links: {
+      "Figma Design":
+        "https://www.figma.com/design/Jn4e56lXfmjma8yoadMY6z/E-COM-COPY?node-id=0-1&p=f&t=vyWdAOMXXAyUetwD-0",
+    },
+  },
+  {
+    category: "Mini Project",
+    name: "SHOPCO - Laravel RESTfulAPI",
+    links: {
+      Soucecode: "https://github.com/quocnva-09/shopco-laravel",
+    },
+  },
+  {
+    category: "Mini Project",
+    name: "SHOPCO - HTML",
+    links: {
+      Soucecode: "https://github.com/quocnva-09/shopco-html",
     },
   },
 ];
